@@ -1,9 +1,11 @@
+# Creating Virtual Private Cloud
 resource "aws_vpc" "jenkins_vpc" {
 	enable_dns_hostnames = true
 	cidr_block = "${var.vpc_cidr}"
-    tags { Name = "default VPC" }
+    tags { Name = "Jenkins VPC" }
 }
 
+# Public available subnet
 resource "aws_subnet" "public_subnet" {
     vpc_id = "${aws_vpc.jenkins_vpc.id}"
     cidr_block = "${var.public_subnet_cidr}"
@@ -11,6 +13,7 @@ resource "aws_subnet" "public_subnet" {
     tags {Name = "Public Subnet"}
 }
 
+# Security group
 resource "aws_security_group" "JenkinsSG" {
     name = "vpc_jenkins"
     description = "Allow all"
@@ -44,12 +47,15 @@ resource "aws_security_group" "JenkinsSG" {
 	tags {Name = "JenkinsSG - allow all"}
 }
 
+# Assing public IP to connect from the internet
 resource "aws_eip" "jenkins-public" {
 	instance = "${aws_instance.jenkins.id}"
 	associate_with_private_ip = "10.0.0.99"
 	vpc = true
 }
 
+
+# Internet gateway to route traffic to Jenkins machine
 resource "aws_internet_gateway" "jenkins" {
 	vpc_id = "${aws_vpc.jenkins_vpc.id}"
 	tags {Name = "InternetGateway"}
