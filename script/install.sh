@@ -26,17 +26,30 @@ sudo yum -y install ansible
 echo "*****************FINISH ANSIBLE"
 
 # Maven
-# cd /opt
-# sudo wget http://www-eu.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
-# sudo touch /etc/profile.d/maven.sh
-# sudo echo "export M2_HOME=/opt/maven" >> /etc/profile.d/maven.sh
-# sudo echo "export PATH=${M2_HOME}/bin:${PATH}" >> /etc/profile.d/maven.sh
-# #export M2_HOME=/opt/maven
-# #export PATH=${M2_HOME}/bin:${PATH}
-# source /etc/profile.d/maven.sh
-# # verification
-# mvn -version 
-# cd /
+echo "*****************MAVEN"
+mkdir /usr/local/apache-maven
+cd /usr/local/apache-maven
+sudo wget http://www-eu.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
+sudo tar xzf apache-maven-3.3.9-bin.tar.gz
+sudo rm -rf apache-maven-3.3.9-bin.tar.gz
+
+sudo touch /etc/profile.d/maven.sh
+sudo chmod 666 /etc/profile.d/maven.sh
+
+sudo echo "export M2_HOME=/usr/local/apache-maven/apache-maven-3.3.9" >> /etc/profile.d/maven.sh
+sudo echo "export M2=$M2_HOME/bin" >> /etc/profile.d/maven.sh
+sudo echo "export PATH=$M2:$PATH" >> /etc/profile.d/maven.sh
+export M2_HOME=/usr/local/apache-maven/apache-maven-3.3.9
+export M2=$M2_HOME/bin
+export PATH=$M2:$PATH
+
+source /etc/profile.d/maven.sh
+
+echo "Verification Maven"
+mvn -version 
+echo "Maven Version: $(mvn -version)"
+cd ~
+echo "*****************FINISH MAVEN"
 
 echo "*****************JENKINS"
 # install jenkins
@@ -53,5 +66,6 @@ echo "*****************FINISH JENKINS"
 # ssh-keyscan -H [hostname],[ip_address] >> ~/.ssh/known_hosts
 # ssh -o StrictHostKeyChecking=no username@hostname.com
 # sudo cat /etc/sudoers
+# add jenkins user
 # useradd myNewUser
 # sudo myNewUser

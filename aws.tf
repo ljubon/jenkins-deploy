@@ -36,9 +36,11 @@ resource "aws_instance" "jenkins" {
 	
 	provisioner "remote-exec" {
 		inline = [
-			"sudo chmod +x /home/ec2-user/install.sh",
-			"echo 'CHANGE PERMISION DONE'",
-			"./install.sh"
+			"sudo chmod 777 /home/ec2-user/install.sh",
+			"echo 'Permission changed succsefully.'",
+			"./install.sh",
+			"echo 'Provisining done'"
+			
 		]
 		
 		connection {
