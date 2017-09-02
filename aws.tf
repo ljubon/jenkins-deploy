@@ -23,8 +23,9 @@ resource "aws_instance" "jenkins" {
 	vpc_security_group_ids = ["${aws_security_group.JenkinsSG.id}"]
 	
 	provisioner "file" {
-		source      = "script/install.sh"
-		destination = "/home/ec2-user/install.sh"
+		# copy all script to home directory
+		source      = "script/"
+		destination = "/home/ec2-user/script/"
 		
 		connection {
 			type		= "ssh"
@@ -36,10 +37,15 @@ resource "aws_instance" "jenkins" {
 	
 	provisioner "remote-exec" {
 		inline = [
-			"sudo chmod 777 /home/ec2-user/install.sh",
-			"echo 'Permission changed succsefully'",
+			"sudo chmod 777 /home/ec2-user/script/*",
+			"echo 'Permission changed succsefully on all files /home/ec2-user'",
+			"cd /home/ec2-user/script",
 			"./install.sh",
-			"echo 'Provisining done'"
+			"./install_java.sh",
+			"./install_ansible.sh",
+			"./install_maven.sh",
+			"./install_jenkins.sh",
+			"echo '[Provisining done]'"
 		]
 		
 		connection {
