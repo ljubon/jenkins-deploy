@@ -54,7 +54,6 @@ resource "aws_eip" "jenkins-public" {
 	vpc = true
 }
 
-
 # Internet gateway to route traffic to Jenkins machine
 resource "aws_internet_gateway" "jenkins" {
 	vpc_id = "${aws_vpc.jenkins_vpc.id}"

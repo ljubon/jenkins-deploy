@@ -1,10 +1,12 @@
+#!/bin/bash
 echo "*****************EPEL RELEASE*****************"
 sudo yum -y install wget telnet git nmap 
 wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-10.noarch.rpm
-#!/bin/bash
 sudo rpm -ivh epel-release-7-10.noarch.rpm
 sudo yum -y install epel-release
 sudo yum -y update
+sudo rm -rf epel-release-7-10.noarch.rpm
+sudo cd $HOME
 echo "*****************FINISH EPEL RELEASE*****************"
 
 # sudo usermod -a -G root jenkins

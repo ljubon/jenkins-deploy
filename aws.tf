@@ -25,7 +25,7 @@ resource "aws_instance" "jenkins" {
 	provisioner "file" {
 		# copy all script to home directory
 		source      = "script/"
-		destination = "/home/ec2-user/script/"
+		destination = "$HOME"
 		
 		connection {
 			type		= "ssh"
@@ -37,9 +37,15 @@ resource "aws_instance" "jenkins" {
 	
 	provisioner "remote-exec" {
 		inline = [
-			"sudo chmod 777 /home/ec2-user/script/*",
-			"echo 'Permission changed succsefully on all files /home/ec2-user'",
-			"cd /home/ec2-user/script",
+			"mkdir script",
+			"mv *.sh /$HOME/script/",
+			"echo 'Scripts moved to /$HOME/script/'",
+			"echo 'Change permission for exucution'",
+			"sudo chmod 777 /$HOME/script/*",
+			"echo '[Permission changed succsefully on all files /home/ec2-user]'",
+			"ls -lart /$HOME/script/",
+			"echo '[Start provisining...]'",
+			"cd /$HOME/script",
 			"./install.sh",
 			"./install_java.sh",
 			"./install_ansible.sh",
