@@ -23,7 +23,8 @@ resource "aws_instance" "jenkins" {
 	vpc_security_group_ids = ["${aws_security_group.JenkinsSG.id}"]
 	
 	provisioner "file" {
-		# copy all script to home directory
+		# copy all files from 
+		# script directory to home directory on remote machine
 		source      = "script/"
 		destination = "$HOME"
 		
@@ -38,12 +39,14 @@ resource "aws_instance" "jenkins" {
 	provisioner "remote-exec" {
 		inline = [
 			"mkdir script",
+			# now we have jenkins and script folder in $HOME directory
 			"mv *.sh /$HOME/script/",
 			"echo 'Scripts moved to /$HOME/script/'",
 			"echo 'Change permission for exucution'",
 			"sudo chmod 777 /$HOME/script/*",
 			"echo '[Permission changed succsefully on all files /home/ec2-user]'",
 			"ls -lart /$HOME/script/",
+			"ls -lart /$HOME/jenkins/",
 			"echo '[Start provisining...]'",
 			"cd /$HOME/script",
 			"./install.sh",

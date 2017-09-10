@@ -1,0 +1,11 @@
+commit 7a1f791da1967c4d76ad5f3fc7d0f3d217904839
+tree cc03ba044c279b06d1bf060d161d43153cca548a
+parent 3d9cb6969117b3dff4ef47acc31c278c9b3e2c90
+author Nina <ljubonikolic@gmail.com> 2017-09-10 11:19:31 +0200
+committer Nina <ljubonikolic@gmail.com> 2017-09-10 11:19:31 +0200
+
+    test
+
+
+
+:100644 100644 1f473208f9b49f244fec16f1fb3a7e33c71c5d9a f8888098a77a64f7a7afdaa3cd4acc600380e3ee M	variables.tf

@@ -1,0 +1,109 @@
+Started by user [8mha:////4GxnkeLnN1OqZJ5f1z6EtryGbHmNqgZV6f2drhyLB307AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/lib/jenkins/workspace/Stage_1_destroy_webapp
+[SSH] executing pre build script:
+
+
+[Stage_1_destroy_webapp] $ /bin/sh -xe /tmp/jenkins2462845026364470761.sh
++ cd /home/ec2-user/webapp-aws-terraform/
++ terraform validate
++ terraform destroy --force
+[0m[1maws_vpc.default: Refreshing state... (ID: vpc-87898afe)[0m
+[0m[1maws_key_pair.ljubon-key-webapp: Refreshing state... (ID: ljubon-key-webapp)[0m
+[0m[1maws_security_group.nat: Refreshing state... (ID: sg-d96a89aa)[0m
+[0m[1maws_subnet.us-east-1-private: Refreshing state... (ID: subnet-524aaa19)[0m
+[0m[1maws_subnet.us-east-1-public: Refreshing state... (ID: subnet-394faf72)[0m
+[0m[1maws_internet_gateway.default: Refreshing state... (ID: igw-c57591bc)[0m
+[0m[1maws_security_group.web: Refreshing state... (ID: sg-0a6b8879)[0m
+[0m[1maws_route_table.us-east-1-public: Refreshing state... (ID: rtb-077a197c)[0m
+[0m[1maws_instance.nat: Refreshing state... (ID: i-0c825f81af1a78f42)[0m
+[0m[1maws_instance.web-1: Refreshing state... (ID: i-0e123f231d60398c1)[0m
+[0m[1maws_security_group.db: Refreshing state... (ID: sg-7b668508)[0m
+[0m[1maws_route_table_association.us-east-1-public: Refreshing state... (ID: rtbassoc-27bdf65d)[0m
+[0m[1maws_eip.web-1: Refreshing state... (ID: eipalloc-15b11327)[0m
+[0m[1maws_eip.nat: Refreshing state... (ID: eipalloc-21b01213)[0m
+[0m[1maws_route_table.us-east-1-private: Refreshing state... (ID: rtb-0740237c)[0m
+[0m[1maws_instance.db-1: Refreshing state... (ID: i-0ccf20a42dd789ca9)[0m
+[0m[1maws_route_table_association.us-east-1-private: Refreshing state... (ID: rtbassoc-cda5eeb7)[0m
+[0m[1maws_key_pair.ljubon-key-webapp: Destroying... (ID: ljubon-key-webapp)[0m[0m
+[0m[1maws_instance.db-1: Destroying... (ID: i-0ccf20a42dd789ca9)[0m[0m
+[0m[1maws_route_table_association.us-east-1-public: Destroying... (ID: rtbassoc-27bdf65d)[0m[0m
+[0m[1maws_route_table_association.us-east-1-private: Destroying... (ID: rtbassoc-cda5eeb7)[0m[0m
+[0m[1maws_eip.nat: Destroying... (ID: eipalloc-21b01213)[0m[0m
+[0m[1maws_route_table_association.us-east-1-private: Destruction complete after 0s[0m[0m
+[0m[1maws_route_table.us-east-1-private: Destroying... (ID: rtb-0740237c)[0m[0m
+[0m[1maws_route_table_association.us-east-1-public: Destruction complete after 0s[0m[0m
+[0m[1maws_route_table.us-east-1-public: Destroying... (ID: rtb-077a197c)[0m[0m
+[0m[1maws_key_pair.ljubon-key-webapp: Destruction complete after 0s[0m[0m
+[0m[1maws_route_table.us-east-1-private: Destruction complete after 1s[0m[0m
+[0m[1maws_route_table.us-east-1-public: Destruction complete after 1s[0m[0m
+[0m[1maws_internet_gateway.default: Destroying... (ID: igw-c57591bc)[0m[0m
+[0m[1maws_eip.nat: Destruction complete after 1s[0m[0m
+[0m[1maws_instance.nat: Destroying... (ID: i-0c825f81af1a78f42)[0m[0m
+[0m[1maws_instance.db-1: Still destroying... (ID: i-0ccf20a42dd789ca9, 10s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-c57591bc, 10s elapsed)[0m[0m
+[0m[1maws_instance.nat: Still destroying... (ID: i-0c825f81af1a78f42, 10s elapsed)[0m[0m
+[0m[1maws_instance.db-1: Still destroying... (ID: i-0ccf20a42dd789ca9, 20s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-c57591bc, 20s elapsed)[0m[0m
+[0m[1maws_instance.nat: Still destroying... (ID: i-0c825f81af1a78f42, 20s elapsed)[0m[0m
+[0m[1maws_instance.db-1: Still destroying... (ID: i-0ccf20a42dd789ca9, 30s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-c57591bc, 30s elapsed)[0m[0m
+[0m[1maws_instance.nat: Still destroying... (ID: i-0c825f81af1a78f42, 30s elapsed)[0m[0m
+[0m[1maws_instance.db-1: Still destroying... (ID: i-0ccf20a42dd789ca9, 40s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-c57591bc, 40s elapsed)[0m[0m
+[0m[1maws_instance.nat: Still destroying... (ID: i-0c825f81af1a78f42, 40s elapsed)[0m[0m
+[0m[1maws_instance.db-1: Still destroying... (ID: i-0ccf20a42dd789ca9, 50s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-c57591bc, 50s elapsed)[0m[0m
+[0m[1maws_instance.nat: Still destroying... (ID: i-0c825f81af1a78f42, 50s elapsed)[0m[0m
+[0m[1maws_instance.db-1: Still destroying... (ID: i-0ccf20a42dd789ca9, 1m0s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-c57591bc, 1m0s elapsed)[0m[0m
+[0m[1maws_instance.nat: Still destroying... (ID: i-0c825f81af1a78f42, 1m0s elapsed)[0m[0m
+[0m[1maws_instance.nat: Destruction complete after 1m3s[0m[0m
+[0m[1maws_security_group.nat: Destroying... (ID: sg-d96a89aa)[0m[0m
+[0m[1maws_security_group.nat: Destruction complete after 1s[0m[0m
+[0m[1maws_instance.db-1: Still destroying... (ID: i-0ccf20a42dd789ca9, 1m10s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-c57591bc, 1m10s elapsed)[0m[0m
+[0m[1maws_instance.db-1: Destruction complete after 1m13s[0m[0m
+[0m[1maws_eip.web-1: Destroying... (ID: eipalloc-15b11327)[0m[0m
+[0m[1maws_security_group.db: Destroying... (ID: sg-7b668508)[0m[0m
+[0m[1maws_subnet.us-east-1-private: Destroying... (ID: subnet-524aaa19)[0m[0m
+[0m[1maws_subnet.us-east-1-private: Destruction complete after 0s[0m[0m
+[0m[1maws_security_group.db: Destruction complete after 1s[0m[0m
+[0m[1maws_eip.web-1: Destruction complete after 2s[0m[0m
+[0m[1maws_instance.web-1: Destroying... (ID: i-0e123f231d60398c1)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-c57591bc, 1m20s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still destroying... (ID: i-0e123f231d60398c1, 10s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-c57591bc, 1m30s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still destroying... (ID: i-0e123f231d60398c1, 20s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-c57591bc, 1m40s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still destroying... (ID: i-0e123f231d60398c1, 30s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-c57591bc, 1m50s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still destroying... (ID: i-0e123f231d60398c1, 40s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-c57591bc, 2m0s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still destroying... (ID: i-0e123f231d60398c1, 50s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Destruction complete after 2m7s[0m[0m
+[0m[1maws_instance.web-1: Still destroying... (ID: i-0e123f231d60398c1, 1m0s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Destruction complete after 1m3s[0m[0m
+[0m[1maws_subnet.us-east-1-public: Destroying... (ID: subnet-394faf72)[0m[0m
+[0m[1maws_security_group.web: Destroying... (ID: sg-0a6b8879)[0m[0m
+[0m[1maws_subnet.us-east-1-public: Destruction complete after 0s[0m[0m
+[0m[1maws_security_group.web: Destruction complete after 1s[0m[0m
+[0m[1maws_vpc.default: Destroying... (ID: vpc-87898afe)[0m[0m
+[0m[1maws_vpc.default: Destruction complete after 0s[0m[0m
+[0m[1m[32m
+Destroy complete! Resources: 17 destroyed.[0m
+[SSH] executing post build script:
+
+cd ../
+rm -rf webapp-aws-terraform/
+FATAL: null
+[8mha:////4ASRtS/zFR5gmOwVujVCStbKnAf4OnNrY8gRqgH8WueDAAAAVx+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0mV3NWzufebKBsTA0NFEYMUmgZnCA1SyAABjCCFBQC2xNaiYAAAAA==[0mjava.lang.NullPointerException
+	at org.jvnet.hudson.plugins.SSHBuildWrapper.executePostBuildScript(SSHBuildWrapper.java:109)
+	at org.jvnet.hudson.plugins.SSHBuildWrapper.access$000(SSHBuildWrapper.java:46)
+	at org.jvnet.hudson.plugins.SSHBuildWrapper$1.tearDown(SSHBuildWrapper.java:71)
+	at hudson.model.Build$BuildExecution.doRun(Build.java:174)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:496)
+	at hudson.model.Run.execute(Run.java:1729)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:419)
+Finished: FAILURE

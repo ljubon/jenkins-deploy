@@ -1,0 +1,31 @@
+Started by GitHub push by ljubon
+Building in workspace /var/lib/jenkins/workspace/test github
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/ljubon/webapp-aws-terraform # timeout=10
+Fetching upstream changes from https://github.com/ljubon/webapp-aws-terraform
+ > git --version # timeout=10
+using GIT_ASKPASS to set credentials 
+ > git fetch --tags --progress https://github.com/ljubon/webapp-aws-terraform +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 294006795068c2397c5ab1b77554d2152d035aa4 (refs/remotes/origin/master)
+Commit message: "test"
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 294006795068c2397c5ab1b77554d2152d035aa4
+ > git rev-list 2112cbede675d03c515bc560f5582501e54d6779 # timeout=10
+[test github] $ /bin/sh -xe /tmp/jenkins2134416401850917623.sh
++ cd /home/ec2-user/
++ git clone https://github.com/ljubon/webapp-aws-terraform.git
+Cloning into 'webapp-aws-terraform'...
++ cp /home/ec2-user/terraform.tfvars /home/ec2-user/webapp-aws-terraform/
++ terraform init
+[0m[1mTerraform initialized in an empty directory![0m
+
+The directory has no Terraform configuration files. You may begin working
+with Terraform immediately by creating Terraform configuration files.[0m
++ terraform validate
+[31mError loading files No Terraform configuration files found in directory: /home/ec2-user
+[0m[0m
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

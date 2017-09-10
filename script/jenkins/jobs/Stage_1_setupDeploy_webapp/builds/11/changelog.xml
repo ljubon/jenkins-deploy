@@ -1,0 +1,11 @@
+commit 62c7f0b5b245d016cb716833e2556383d3a97dc0
+tree 6a9c942dc8a3f0a31e0b844a1669eaa562d8c55f
+parent 4307fa7fd38a23a787459df320ea501e600e8842
+author Nina <ljubonikolic@gmail.com> 2017-09-10 11:51:48 +0200
+committer Nina <ljubonikolic@gmail.com> 2017-09-10 11:51:48 +0200
+
+    private key path
+
+
+
+:100644 100644 f8888098a77a64f7a7afdaa3cd4acc600380e3ee 93abe01960a0a0e07ee94d66c28d6bf193538f8e M	variables.tf
