@@ -15,13 +15,23 @@ variable "public_subnet_cidr" {
 
 variable "aws_region" {
     description = "EC2 Region - us-east-1"
-    default = "us-east-1"
+    default = "eu-central-1" 
+	#	us-east-1 		N. Virgina	default 
+	#	eu-central-1 	Frankfurt
+}
+
+variable "availability_zone" {
+	description = "EC2 availability zone"
+	#default = "us-east-1b"
+	default = "eu-central-1b"
+
 }
 
 variable "amis" {
-	description = "AMIs by region"
-	default = "ami-c998b6b2" 
+	description = "AMIs by region" # us-east-1
+	default = "ami-d74be5b8"  
 	# RedHat 14.04 LTS
-	# check custom image
+	# us-east-1 	RHEL AMI ami-c998b6b2
+	# eu-central-1 	RHEL AMI ami-d74be5b8
 	
 }

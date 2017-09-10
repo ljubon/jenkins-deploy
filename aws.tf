@@ -13,7 +13,7 @@ resource "aws_key_pair" "ljubon-key-jenkins" {
 # RHEL instance for Jenkins server
 resource "aws_instance" "jenkins" {
 	ami = "${var.amis}"
-	availability_zone = "us-east-1b"
+	availability_zone = "${var.availability_zone}"
 	private_ip = "10.0.0.99"
 	instance_type = "t2.micro"
 	key_name = "${var.key_name}"
@@ -51,6 +51,7 @@ resource "aws_instance" "jenkins" {
 			"./install_ansible.sh",
 			"./install_maven.sh",
 			"./install_jenkins.sh",
+			"./install_terraform.sh",
 			"echo '[Provisining done]'"
 		]
 		
