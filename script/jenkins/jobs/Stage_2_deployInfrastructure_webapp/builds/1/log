@@ -1,9 +1,0 @@
-Started by upstream project "[8mha:////4JHmgaoFkIHfOpsNHNw75I3UKilPxpfWKdS6/mltPYLCAAAAnh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JKDuxPTUeMP44tSS0gJ9APRMkLfIAAAA[0mStage_1_setup" build number [8mha:////4EaAsxt2wPTfPC40eOGUj+rKsCcGSrrOKtppro05m8ZhAAAAnh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBhH9rPwkoO7E9NR4w/ji1JLSAn1zAHLINALJAAAA[0m7
-originally caused by:
- Started by GitHub push by ljubon
-Building in workspace /var/lib/jenkins/workspace/Stage_2_deployInfrastructure
-[Stage_2_deployInfrastructure] $ /bin/sh -xe /tmp/jenkins7060490077746025102.sh
-+ cd /home/ecc2-user/webapp-aws-terraform/
-/tmp/jenkins7060490077746025102.sh: line 2: cd: /home/ecc2-user/webapp-aws-terraform/: No such file or directory
-Build step 'Execute shell' marked build as failure
-Finished: FAILURE

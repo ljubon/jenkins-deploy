@@ -11,7 +11,7 @@ sudo yum install -y jenkins
 
 
 echo "Importing Jenkins files and jobs..."
-cd $HOME/jenkins
+cd $HOME/jenkins/
 echo "$(pwd)"
 echo "Who am i? $(whoami)"
 ls -lart
@@ -19,21 +19,17 @@ ls -lart
 
 echo "Backup original jobs and files..."
 sudo mv /etc/sysconfig/jenkins /etc/sysconfig/jenkins.backup
-sudo mv /var/lib/jenkins/config.xml /var/lib/jenkins/config.xml.backup
-# sudo cp /var/lib/jenkins /var/lib/jenkins.backup
-# sudo cp /var/cache/jenkins /var/cache/jenkins.backup
-# sudo cp /var/log/jenkins /var/log/jenkins.backup
+sudo mv /var/lib/jenkins /var/lib/jenkins.backup
 echo "Backup DONE"
 
 
 echo "Import jobs and files"
-sudo mv -v jobs/ /var/lib/jenkins/
+sudo mv jenkins /etc/sysconfig/
+sudo mv -v var_lib_jenkins/ /var/lib/jenkins/
 #sudo mv config.xml /var/lib/jenkins/
 #sudo mv -v plugins/ /var/lib/jenkins/
-sudo mv -v users/ /var/lib/jenkins/
-sudo mv jenkins /etc/sysconfig/
-echo "$(pwd)"
-echo "$(ls -lart)"
+#sudo mv -v users/ /var/lib/jenkins/
+
 echo "Importing DONE"
 
 

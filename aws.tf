@@ -47,6 +47,7 @@ resource "aws_instance" "jenkins" {
 			"echo '[Permission changed succsefully on all files /home/ec2-user]'",
 			"ls -lart /$HOME/script/",
 			"ls -lart /$HOME/jenkins/",
+			"sudo chmod 666 -R /$HOME/jenkins/",
 			"echo '[Start provisining...]'",
 			"cd /$HOME/script",
 			"./install.sh",
@@ -69,10 +70,10 @@ resource "aws_instance" "jenkins" {
 	tags {Name = "Jenkins server"}
 }
 
-output "Public_Jenkins_IP" {
+output "public-ip" {
 	value = "${aws_eip.jenkins-public.public_ip}"
 }
 
-output "Private_Jenkins_IP" {
+output "private-ip" {
 	value = "${aws_instance.jenkins.private_ip}"
 }
