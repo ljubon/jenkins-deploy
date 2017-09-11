@@ -9,11 +9,12 @@ sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenk
 sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
 sudo yum install -y jenkins
 
+
 echo "Importing Jenkins files and jobs..."
 cd $HOME/jenkins
 echo "$(pwd)"
+echo "Who am i? $(whoami)"
 ls -lart
-
 
 
 echo "Backup original jobs and files..."
@@ -22,7 +23,6 @@ sudo mv /etc/sysconfig/jenkins /etc/sysconfig/jenkins.backup
 # sudo cp /var/cache/jenkins /var/cache/jenkins.backup
 # sudo cp /var/log/jenkins /var/log/jenkins.backup
 echo "Backup DONE"
-
 
 
 echo "Import jobs and files"
@@ -36,7 +36,6 @@ echo "$(ls -lart)"
 echo "Importing DONE"
 
 
-
 echo "Setting permissions"
 sudo chmod 666 /etc/sysconfig/jenkins
 sudo chmod 666 -R /var/lib/jenkins/
@@ -44,8 +43,15 @@ sudo chmod 666 -R /var/cache/jenkins/
 sudo chmod 666 -R /var/log/jenkins/
 echo "Permissions DONE"
 
+
 echo "Who am i? $(whoami)"
 echo "Where am i? $(pwd)"
+
+
+echo "dos2unix /etc/sysconfig/jenkins"
+sudo dos2unix /etc/sysconfig/jenkins
+echo "dos2unix jenkins file....DONE"
+
 
 echo "Start Jenkins..."
 sudo systemctl enable jenkins
