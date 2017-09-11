@@ -16,7 +16,7 @@ echo "Where am I? You are in: $(pwd)"
 echo "*****************SSH_KEYS DONE*****************"
 
 echo "*****************EPEL RELEASE*****************"
-sudo yum -y install wget telnet git nmap zip unzip
+sudo yum -y install wget telnet git nmap zip unzip dos2unix
 wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-10.noarch.rpm
 sudo rpm -ivh epel-release-7-10.noarch.rpm
 sudo yum -y install epel-release
