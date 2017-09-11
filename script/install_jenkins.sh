@@ -27,9 +27,9 @@ echo "Backup DONE"
 
 echo "Import jobs and files"
 sudo mv -v jobs/ /var/lib/jenkins/
+sudo mv config.xml /var/lib/jenkins/
 sudo mv -v plugins/ /var/lib/jenkins/
 sudo mv -v users/ /var/lib/jenkins/
-sudo mv config.xml /var/lib/jenkins/
 sudo mv jenkins /etc/sysconfig/
 echo "$(pwd)"
 echo "$(ls -lart)"

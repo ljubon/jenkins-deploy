@@ -14,7 +14,7 @@ variable "public_subnet_cidr" {
 }
 
 variable "aws_region" {
-    description = "EC2 Region - us-east-1"
+    description = "EC2 Region - eu-central-1 Frankfurt"
     default = "eu-central-1" 
 	#	us-east-1 		N. Virgina	default 
 	#	eu-central-1 	Frankfurt
