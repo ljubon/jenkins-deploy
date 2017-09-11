@@ -1,0 +1,86 @@
+Started by user [8mha:////4HEOQUEChptOB8pPoaoTz49LhElBDk08yi0bQ9aU5yb1AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+Building in workspace /var/lib/jenkins/jobs/Stage_1_destroy_webapp/workspace
+[workspace] $ /bin/sh -xe /tmp/jenkins5051530741309624020.sh
++ cd /home/ec2-user/webapp-aws-terraform/
++ terraform validate
++ terraform destroy --force
+[0m[1maws_key_pair.ljubon-key-webapp: Refreshing state... (ID: ljubon-key-webapp)[0m
+[0m[1maws_vpc.default: Refreshing state... (ID: vpc-9d4964f5)[0m
+[0m[1maws_internet_gateway.default: Refreshing state... (ID: igw-d668a4be)[0m
+[0m[1maws_security_group.nat: Refreshing state... (ID: sg-3191725b)[0m
+[0m[1maws_security_group.web: Refreshing state... (ID: sg-ad9073c7)[0m
+[0m[1maws_subnet.us-east-1-public: Refreshing state... (ID: subnet-3ec33555)[0m
+[0m[1maws_subnet.us-east-1-private: Refreshing state... (ID: subnet-3dc33556)[0m
+[0m[1maws_route_table.us-east-1-public: Refreshing state... (ID: rtb-882ed9e3)[0m
+[0m[1maws_instance.nat: Refreshing state... (ID: i-0b753fbc9ea20335d)[0m
+[0m[1maws_instance.web-1: Refreshing state... (ID: i-06f6b9502d250249f)[0m
+[0m[1maws_security_group.db: Refreshing state... (ID: sg-f592719f)[0m
+[0m[1maws_route_table_association.us-east-1-public: Refreshing state... (ID: rtbassoc-30da915b)[0m
+[0m[1maws_route_table.us-east-1-private: Refreshing state... (ID: rtb-802ed9eb)[0m
+[0m[1maws_eip.nat: Refreshing state... (ID: eipalloc-4bf5f822)[0m
+[0m[1maws_eip.web-1: Refreshing state... (ID: eipalloc-95fbf6fc)[0m
+[0m[1maws_route_table_association.us-east-1-private: Refreshing state... (ID: rtbassoc-66da910d)[0m
+[0m[1maws_instance.db-1: Refreshing state... (ID: i-04a5df8c3c3a3c8f6)[0m
+[0m[1maws_key_pair.ljubon-key-webapp: Destroying... (ID: ljubon-key-webapp)[0m[0m
+[0m[1maws_instance.db-1: Destroying... (ID: i-04a5df8c3c3a3c8f6)[0m[0m
+[0m[1maws_route_table_association.us-east-1-public: Destroying... (ID: rtbassoc-30da915b)[0m[0m
+[0m[1maws_eip.nat: Destroying... (ID: eipalloc-4bf5f822)[0m[0m
+[0m[1maws_route_table_association.us-east-1-private: Destroying... (ID: rtbassoc-66da910d)[0m[0m
+[0m[1maws_route_table_association.us-east-1-public: Destruction complete after 1s[0m[0m
+[0m[1maws_route_table.us-east-1-public: Destroying... (ID: rtb-882ed9e3)[0m[0m
+[0m[1maws_route_table_association.us-east-1-private: Destruction complete after 1s[0m[0m
+[0m[1maws_route_table.us-east-1-private: Destroying... (ID: rtb-802ed9eb)[0m[0m
+[0m[1maws_key_pair.ljubon-key-webapp: Destruction complete after 1s[0m[0m
+[0m[1maws_route_table.us-east-1-public: Destruction complete after 0s[0m[0m
+[0m[1maws_internet_gateway.default: Destroying... (ID: igw-d668a4be)[0m[0m
+[0m[1maws_route_table.us-east-1-private: Destruction complete after 0s[0m[0m
+[0m[1maws_eip.nat: Destruction complete after 1s[0m[0m
+[0m[1maws_instance.nat: Destroying... (ID: i-0b753fbc9ea20335d)[0m[0m
+[0m[1maws_instance.db-1: Still destroying... (ID: i-04a5df8c3c3a3c8f6, 10s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-d668a4be, 10s elapsed)[0m[0m
+[0m[1maws_instance.nat: Still destroying... (ID: i-0b753fbc9ea20335d, 10s elapsed)[0m[0m
+[0m[1maws_instance.db-1: Still destroying... (ID: i-04a5df8c3c3a3c8f6, 20s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-d668a4be, 20s elapsed)[0m[0m
+[0m[1maws_instance.nat: Still destroying... (ID: i-0b753fbc9ea20335d, 20s elapsed)[0m[0m
+[0m[1maws_instance.db-1: Still destroying... (ID: i-04a5df8c3c3a3c8f6, 30s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-d668a4be, 30s elapsed)[0m[0m
+[0m[1maws_instance.nat: Still destroying... (ID: i-0b753fbc9ea20335d, 30s elapsed)[0m[0m
+[0m[1maws_instance.db-1: Still destroying... (ID: i-04a5df8c3c3a3c8f6, 40s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-d668a4be, 40s elapsed)[0m[0m
+[0m[1maws_instance.nat: Still destroying... (ID: i-0b753fbc9ea20335d, 40s elapsed)[0m[0m
+[0m[1maws_instance.db-1: Still destroying... (ID: i-04a5df8c3c3a3c8f6, 50s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-d668a4be, 50s elapsed)[0m[0m
+[0m[1maws_instance.nat: Still destroying... (ID: i-0b753fbc9ea20335d, 50s elapsed)[0m[0m
+[0m[1maws_instance.db-1: Destruction complete after 1m0s[0m[0m
+[0m[1maws_subnet.us-east-1-private: Destroying... (ID: subnet-3dc33556)[0m[0m
+[0m[1maws_security_group.db: Destroying... (ID: sg-f592719f)[0m[0m
+[0m[1maws_eip.web-1: Destroying... (ID: eipalloc-95fbf6fc)[0m[0m
+[0m[1maws_subnet.us-east-1-private: Destruction complete after 0s[0m[0m
+[0m[1maws_security_group.db: Destruction complete after 0s[0m[0m
+[0m[1maws_eip.web-1: Destruction complete after 1s[0m[0m
+[0m[1maws_instance.web-1: Destroying... (ID: i-06f6b9502d250249f)[0m[0m
+[0m[1maws_instance.nat: Destruction complete after 1m0s[0m[0m
+[0m[1maws_security_group.nat: Destroying... (ID: sg-3191725b)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-d668a4be, 1m0s elapsed)[0m[0m
+[0m[1maws_security_group.nat: Destruction complete after 0s[0m[0m
+[0m[1maws_instance.web-1: Still destroying... (ID: i-06f6b9502d250249f, 10s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-d668a4be, 1m10s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still destroying... (ID: i-06f6b9502d250249f, 20s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-d668a4be, 1m20s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still destroying... (ID: i-06f6b9502d250249f, 30s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-d668a4be, 1m30s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still destroying... (ID: i-06f6b9502d250249f, 40s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-d668a4be, 1m40s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Destruction complete after 1m44s[0m[0m
+[0m[1maws_instance.web-1: Destruction complete after 49s[0m[0m
+[0m[1maws_security_group.web: Destroying... (ID: sg-ad9073c7)[0m[0m
+[0m[1maws_subnet.us-east-1-public: Destroying... (ID: subnet-3ec33555)[0m[0m
+[0m[1maws_subnet.us-east-1-public: Destruction complete after 0s[0m[0m
+[0m[1maws_security_group.web: Destruction complete after 0s[0m[0m
+[0m[1maws_vpc.default: Destroying... (ID: vpc-9d4964f5)[0m[0m
+[0m[1maws_vpc.default: Destruction complete after 0s[0m[0m
+[0m[1m[32m
+Destroy complete! Resources: 17 destroyed.[0m
++ cd /home/ec2-user/
++ rm -rf webapp-aws-terraform/
+Finished: SUCCESS

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UpstreamCause>
+            <upstreamProject>Stage_1_setupDeploy_webapp</upstreamProject>
+            <upstreamUrl>job/Stage_1_setupDeploy_webapp/</upstreamUrl>
+            <upstreamBuild>17</upstreamBuild>
+            <upstreamCauses>
+              <com.cloudbees.jenkins.GitHubPushCause plugin="github@1.28.0">
+                <pushedBy>ljubon</pushedBy>
+              </com.cloudbees.jenkins.GitHubPushCause>
+            </upstreamCauses>
+          </hudson.model.Cause_-UpstreamCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+  </actions>
+  <queueId>3</queueId>
+  <timestamp>1505126429958</timestamp>
+  <startTime>1505126429960</startTime>
+  <result>FAILURE</result>
+  <duration>343955</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/lib/jenkins/jobs/Stage_2_deployInfrastructure_webapp/workspace</workspace>
+  <hudsonVersion>2.78</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

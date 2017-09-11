@@ -1,0 +1,14 @@
+commit 8c525a74e1b545b76c5fc5e53a5140dc06b16f1b
+tree 438e544457fbc79addc19bcc6f9b34d64e310dd0
+parent d22341571c796efc063c1d66254b9a96019c3b94
+author Ljubo Nikolic <ljubonikolic@gmail.com> 2017-09-11 22:07:25 +0200
+committer Ljubo Nikolic <ljubonikolic@gmail.com> 2017-09-11 22:07:25 +0200
+
+    change AMI for new region
+
+
+
+:100644 100644 a701ee7b027fdffa668d1968b33157d436885e6d 491bf3f391158d279a1274dc5cc0e76bf4cf9ed9 M	script/install_db.sh
+:100644 100644 c65fc6bcd52f1fc639d8e41ae4c43b778e2599a3 a5f1cd718d139fcfae4838ae11f8ad6fa6107539 M	script/install_nat.sh
+:100644 100644 6b1209037fa72683f63a95c38bb75774f7e209a8 10ff2c3b8e72969a5ae1d2b9bbcd696783a9412a M	script/install_web.sh
+:100644 100644 d1b6946141ff726dbed183ee3024d5f2b70b4b11 8761428b65b2921d87e5999651efaf588d2e66ed M	variables.tf

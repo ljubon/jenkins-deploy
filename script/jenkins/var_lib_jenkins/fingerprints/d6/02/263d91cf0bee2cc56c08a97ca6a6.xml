@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2017-09-11 10:33:48.118 UTC</timestamp>
+  <md5sum>d602263d91cf0bee2cc56c08a97ca6a6</md5sum>
+  <fileName>Credential id=3c7467c7-0a58-46a6-b114-109d1a331805 name=ljubon/****** (git credentials)</fileName>
+  <usages>
+    <entry>
+      <string>Stage_1_setupDeploy_webapp</string>
+      <ranges>15-41</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

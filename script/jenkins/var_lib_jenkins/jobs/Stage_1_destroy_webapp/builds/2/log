@@ -1,0 +1,24 @@
+Started by user [8mha:////4GxnkeLnN1OqZJ5f1z6EtryGbHmNqgZV6f2drhyLB307AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/lib/jenkins/workspace/Stage_1_destroy_webapp
+[SSH] executing pre build script:
+
+
+[Stage_1_destroy_webapp] $ /bin/sh -xe /tmp/jenkins8691257323042626518.sh
++ cd /home/ec2-user/webapp-aws-terraform/
+/tmp/jenkins8691257323042626518.sh: line 2: cd: /home/ec2-user/webapp-aws-terraform/: No such file or directory
+Build step 'Execute shell' marked build as failure
+[SSH] executing post build script:
+
+sudo rm -rf /home/ec2-user/webapp-aws-terraform
+FATAL: null
+[8mha:////4ASRtS/zFR5gmOwVujVCStbKnAf4OnNrY8gRqgH8WueDAAAAVx+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0mV3NWzufebKBsTA0NFEYMUmgZnCA1SyAABjCCFBQC2xNaiYAAAAA==[0mjava.lang.NullPointerException
+	at org.jvnet.hudson.plugins.SSHBuildWrapper.executePostBuildScript(SSHBuildWrapper.java:109)
+	at org.jvnet.hudson.plugins.SSHBuildWrapper.access$000(SSHBuildWrapper.java:46)
+	at org.jvnet.hudson.plugins.SSHBuildWrapper$1.tearDown(SSHBuildWrapper.java:71)
+	at hudson.model.Build$BuildExecution.doRun(Build.java:174)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:496)
+	at hudson.model.Run.execute(Run.java:1729)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+	at hudson.model.ResourceController.execute(ResourceController.java:97)
+	at hudson.model.Executor.run(Executor.java:419)
+Finished: FAILURE

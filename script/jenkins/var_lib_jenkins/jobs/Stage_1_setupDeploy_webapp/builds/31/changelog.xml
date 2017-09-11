@@ -1,0 +1,12 @@
+commit c8955ce59e015b7ea238164650992e0745a42bb5
+tree ae63a8052b1b878e88668f846e90bfb069e23337
+parent 98a55dc4c1a97319f448411290e9b091a5b6d4a3
+author Ljubo Nikolic <ljubonikolic@gmail.com> 2017-09-11 21:45:17 +0200
+committer Ljubo Nikolic <ljubonikolic@gmail.com> 2017-09-11 21:45:17 +0200
+
+    change AMI for new region
+
+
+
+:100644 100644 23433064d5f68b61bfae2bacbc216581ffe5c8a1 6f9c8914351c6224448558ce601104519e5642de M	variables.tf
+:100644 100644 36dbf27cc69bf500e772412c844e1ad2f1e608f6 d7237370d3a76ac71aa467d5e1bf5f7b2b1f01e9 M	vpc.tf

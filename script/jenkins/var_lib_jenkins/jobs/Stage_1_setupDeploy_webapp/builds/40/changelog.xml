@@ -1,0 +1,11 @@
+commit 3130d814947f1ffd0cee26f65379411d90a43c1c
+tree 54968d39cc9d9a2d966db7952df7817502a7c491
+parent c615b91284a782159d10b9788080f139442923ab
+author Ljubo Nikolic <ljubonikolic@gmail.com> 2017-09-11 23:14:32 +0200
+committer Ljubo Nikolic <ljubonikolic@gmail.com> 2017-09-11 23:14:32 +0200
+
+    Suse OS for Web/DB
+
+
+
+:100644 100644 1bc81b3b6bfca4c2fd850a3bf5283ba0235e163a 8cd16ce9d3ee1600297ef2647089783a94328dba M	variables.tf
