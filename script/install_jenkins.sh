@@ -9,6 +9,10 @@ sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenk
 sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
 sudo yum install -y jenkins
 
+echo "Backup original jobs and files..."
+sudo mv /etc/sysconfig/jenkins /etc/sysconfig/jenkins.backup
+sudo mv /var/lib/jenkins /var/lib/jenkins.backup
+echo "Backup DONE"
 
 echo "Importing Jenkins files and jobs..."
 cd $HOME/jenkins/
@@ -16,20 +20,11 @@ echo "$(pwd)"
 echo "Who am i? $(whoami)"
 ls -lart
 
-
-echo "Backup original jobs and files..."
-sudo mv /etc/sysconfig/jenkins /etc/sysconfig/jenkins.backup
-sudo mv /var/lib/jenkins /var/lib/jenkins.backup
-echo "Backup DONE"
-
-
-echo "Import jobs and files"
 sudo mv jenkins /etc/sysconfig/
 sudo mv -v var_lib_jenkins/ /var/lib/jenkins/
 #sudo mv config.xml /var/lib/jenkins/
 #sudo mv -v plugins/ /var/lib/jenkins/
 #sudo mv -v users/ /var/lib/jenkins/
-
 echo "Importing DONE"
 
 
