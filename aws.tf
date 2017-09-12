@@ -27,7 +27,7 @@ resource "aws_instance" "jenkins" {
 		# script directory to home directory on remote machine
 		source      = "script/"
 		destination = "$HOME"
-		
+
 		connection {
 			type		= "ssh"
 			user		= "ec2-user"
@@ -53,7 +53,7 @@ resource "aws_instance" "jenkins" {
 			"./install_java.sh",
 			"./install_ansible.sh",
 			"./install_maven.sh",
-			"./install_jenkins.sh",
+			#"./install_jenkins.sh",
 			"./install_terraform.sh",
 			"echo '[Provisining done]'"
 		]

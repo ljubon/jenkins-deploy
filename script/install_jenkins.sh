@@ -1,7 +1,8 @@
 #@IgnoreInspection BashAddShebang
 echo "[*****************JENKINS*****************]"
-echo "$(echo $JAVA_HOME)"
-echo "$(echo $PATH)"
+echo $JAVA_HOME
+echo $PATH
+
 sudo cd $HOME
 #sudo chmod -R 666 jenkins/
 ls -lart
@@ -15,16 +16,15 @@ sudo mv /var/lib/jenkins /var/lib/jenkins.backup
 echo "Backup DONE"
 
 echo "Importing Jenkins files and jobs..."
-sudo cd /home/ec2-user/script/jenkins/
-echo "$(pwd)"
-echo "Who am i? $(whoami)"
-ls -lart
+cd /$HOME/script/jenkins
+echo "Location: $(pwd) User: $(whoami) List current directory: $(ls -lart)"
 
+#sudo mv -v var_lib_jenkins/ /var/lib/jenkins/
 sudo mv jenkins /etc/sysconfig/
-sudo mv -v var_lib_jenkins/ /var/lib/jenkins/
-#sudo mv config.xml /var/lib/jenkins/
+sudo mv config.xml /var/lib/jenkins/
 #sudo mv -v plugins/ /var/lib/jenkins/
-#sudo mv -v users/ /var/lib/jenkins/
+sudo mv -v users/ /var/lib/jenkins/
+sudo mv -v jobs/ /var/lib/jenkins/
 echo "Importing DONE"
 
 
@@ -49,6 +49,7 @@ echo "dos2unix jenkins file....DONE"
 echo "Start Jenkins..."
 sudo systemctl enable jenkins
 sudo systemctl start jenkins
+sudo systemctl status jenkins
 cd $HOME
 echo "Jenkins is started..."
 echo "$(sudo systemctl status jenkins)"
