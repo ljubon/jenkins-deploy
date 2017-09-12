@@ -2,6 +2,7 @@ echo "[*****************JENKINS*****************]"
 echo "$(echo $JAVA_HOME)"
 echo "$(echo $PATH)"
 sudo cd $HOME
+sudo chmod -R 666 jenkins/
 ls -lart
 sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
 sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
@@ -13,7 +14,7 @@ sudo mv /var/lib/jenkins /var/lib/jenkins.backup
 echo "Backup DONE"
 
 echo "Importing Jenkins files and jobs..."
-cd $HOME/jenkins/
+sudo cd $HOME/jenkins/
 echo "$(pwd)"
 echo "Who am i? $(whoami)"
 ls -lart
@@ -50,4 +51,4 @@ sudo systemctl start jenkins
 cd $HOME
 echo "Jenkins is started..."
 echo "$(sudo systemctl status jenkins)"
-echo "[*****************FNISH JENKINS*****************]"
+echo "[*****************FINISH JENKINS*****************]"

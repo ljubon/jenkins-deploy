@@ -33,7 +33,6 @@ resource "aws_instance" "jenkins" {
 			user		= "ec2-user"
 			agent		= true
 		}
-	
 	}
 	
 	provisioner "remote-exec" {
