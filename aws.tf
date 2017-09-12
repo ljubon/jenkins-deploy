@@ -41,9 +41,8 @@ resource "aws_instance" "jenkins" {
 			# now we have jenkins and script folder in $HOME directory
 			"mv *.sh /$HOME/script/",
 			"echo 'Scripts moved to /$HOME/script/'",
-			"echo 'Change permission for exucution'",
 			"sudo chmod 777 /$HOME/script/*",
-			"echo '[Permission changed succsefully on all files /home/ec2-user]'",
+			"echo 'Set permission for scripts /$HOME/script/'",
 			"ls -lart /$HOME/script/",
 			"ls -lart /$HOME/jenkins/",
 			"sudo chmod 666 -R /$HOME/jenkins/",
@@ -53,8 +52,8 @@ resource "aws_instance" "jenkins" {
 			"./install_java.sh",
 			"./install_ansible.sh",
 			"./install_maven.sh",
-			#"./install_jenkins.sh",
 			"./install_terraform.sh",
+			"./install_jenkins.sh",
 			"echo '[Provisining done]'"
 		]
 		

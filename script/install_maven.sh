@@ -1,8 +1,6 @@
 #@IgnoreInspection BashAddShebang
 # Maven
 echo "*****************MAVEN*****************"
-echo "$(echo $JAVA_HOME)"
-echo "$(echo $PATH)"
 echo "[Download and uzip maven]"
 cd /opt/
 sudo wget http://www-eu.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz
@@ -31,7 +29,6 @@ echo "[Load maven.sh file]"
 source /etc/profile.d/maven.sh
 echo "[Maven Version: $(mvn -v)]"
 
-echo "$(echo $JAVA_HOME)"
-echo "$(echo $PATH)"
-cd /$HOME/
+
+cd  $HOME/
 echo "*****************FINISH MAVEN*****************"
