@@ -24,7 +24,6 @@ sudo yum install -y jenkins
 #sudo mv -v jobs/ /var/lib/jenkins/
 #echo "Importing DONE"
 
-
 #echo "Setting permissions"
 #sudo chmod 666 /etc/sysconfig/jenkins
 #sudo chmod 666 -R /var/lib/jenkins/
@@ -32,16 +31,13 @@ sudo yum install -y jenkins
 #sudo chmod 666 -R /var/log/jenkins/
 #echo "Permissions DONE"
 
-
 #echo "Who am i? $(whoami)"
 #echo "Where am i? $(pwd)"
-
 
 #echo "dos2unix /etc/sysconfig/jenkins"
 #sudo dos2unix /etc/sysconfig/jenkins
 #sudo dos2unix /var/lib/jenkins/config.xml
 #echo "dos2unix jenkins file....DONE"
-
 
 echo "Start Jenkins..."
 sudo systemctl enable jenkins
