@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo "*****************GENERATE SSH_KEY*****************"
 echo "Who am i? You are: $(whoami)"
