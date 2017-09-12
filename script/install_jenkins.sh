@@ -1,6 +1,3 @@
-#!/usr/bin/env bash
-
-
 echo "[*****************JENKINS*****************]"
 echo "$(echo $JAVA_HOME)"
 echo "$(echo $PATH)"

@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # Ansible
 echo "*****************ANSIBLE*****************"
 sudo yum -y install gcc 

@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # Maven
 echo "*****************MAVEN*****************"
 echo "$(echo $JAVA_HOME)"
