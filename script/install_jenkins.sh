@@ -3,7 +3,7 @@ echo "[*****************JENKINS*****************]"
 echo "$(echo $JAVA_HOME)"
 echo "$(echo $PATH)"
 sudo cd $HOME
-sudo chmod -R 666 jenkins/
+#sudo chmod -R 666 jenkins/
 ls -lart
 sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
 sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
@@ -15,16 +15,16 @@ sudo mv /var/lib/jenkins /var/lib/jenkins.backup
 echo "Backup DONE"
 
 echo "Importing Jenkins files and jobs..."
-sudo cd $HOME/jenkins/
+sudo cd /home/ec2-user/script/jenkins/
 echo "$(pwd)"
 echo "Who am i? $(whoami)"
 ls -lart
 
 sudo mv jenkins /etc/sysconfig/
-#sudo mv -v var_lib_jenkins/ /var/lib/jenkins/
-sudo mv config.xml /var/lib/jenkins/
-sudo mv -v plugins/ /var/lib/jenkins/
-sudo mv -v users/ /var/lib/jenkins/
+sudo mv -v var_lib_jenkins/ /var/lib/jenkins/
+#sudo mv config.xml /var/lib/jenkins/
+#sudo mv -v plugins/ /var/lib/jenkins/
+#sudo mv -v users/ /var/lib/jenkins/
 echo "Importing DONE"
 
 
