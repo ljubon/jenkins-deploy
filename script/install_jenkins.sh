@@ -21,10 +21,10 @@ echo "Who am i? $(whoami)"
 ls -lart
 
 sudo mv jenkins /etc/sysconfig/
-sudo mv -v var_lib_jenkins/ /var/lib/jenkins/
-#sudo mv config.xml /var/lib/jenkins/
-#sudo mv -v plugins/ /var/lib/jenkins/
-#sudo mv -v users/ /var/lib/jenkins/
+#sudo mv -v var_lib_jenkins/ /var/lib/jenkins/
+sudo mv config.xml /var/lib/jenkins/
+sudo mv -v plugins/ /var/lib/jenkins/
+sudo mv -v users/ /var/lib/jenkins/
 echo "Importing DONE"
 
 
