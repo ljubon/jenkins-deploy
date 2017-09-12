@@ -1,3 +1,4 @@
+#@IgnoreInspection BashAddShebang
 # Maven
 echo "*****************MAVEN*****************"
 echo "$(echo $JAVA_HOME)"

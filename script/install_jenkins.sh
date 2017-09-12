@@ -1,3 +1,4 @@
+#@IgnoreInspection BashAddShebang
 echo "[*****************JENKINS*****************]"
 echo "$(echo $JAVA_HOME)"
 echo "$(echo $PATH)"

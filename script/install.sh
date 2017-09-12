@@ -1,3 +1,4 @@
+#@IgnoreInspection BashAddShebang
 
 echo "*****************GENERATE SSH_KEY*****************"
 echo "Who am i? You are: $(whoami)"

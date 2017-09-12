@@ -1,3 +1,4 @@
+#@IgnoreInspection BashAddShebang
 # Install Terraform
 
 echo "Download Terraform..."

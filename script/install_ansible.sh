@@ -1,3 +1,4 @@
+#@IgnoreInspection BashAddShebang
 # Ansible
 echo "*****************ANSIBLE*****************"
 sudo yum -y install gcc 

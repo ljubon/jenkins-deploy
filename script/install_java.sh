@@ -1,3 +1,4 @@
+#@IgnoreInspection BashAddShebang
 # Java
 echo "*****************JAVA*****************"
 echo "$(echo $JAVA_HOME)"
