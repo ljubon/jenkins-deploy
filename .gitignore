@@ -12,6 +12,7 @@
 *.tfvars
 *.lock.info
 *.lock
+*.backup
 
 # Module
 .terraform/
