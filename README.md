@@ -1,11 +1,9 @@
 # jenkins-deploy
 Deploy and setup Jenkins on RHEL AWS instance with terraform and ansible
 
-* Make sure that script/jenkins file is set to Unix EOL *
-
 * Run Pagent and load key *.ppk
-* Install/Update Terraform and set path to the file
-* Add file with access parameters
+* Install/Update Terraform and set path to the .exe file (verify with terraform status)
+* Add file with access parameters for AWS
 * git clone [repo link]
 * terraform init
 * terraform plan
