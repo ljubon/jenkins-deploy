@@ -1,0 +1,70 @@
+Started by upstream project "[8mha:////4N4Er/7iiEAzRimzDORqS3RmHiKB5CVL4XJWFk1qeZxOAAAArx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy5EgYV/az8JKDuxPTUeKN4l9SCnPzKeM+84pLE5NTi+PDUJMeCAn0Ahelb/NkAAAA=[0mStage_2_Deploy_Instaces_WebApp" build number [8mha:////4K7p3+0CVun4hhxNtNDzWTXl+VQMe306TjiqHf+algTyAAAArx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBlX9rPwkoO7E9NR4o3iX1IKc/Mp4z7ziksTk1OL48NQkx4ICfSMAGTIPiNoAAAA=[0m2
+originally caused by:
+ Started by upstream project "[8mha:////4AwvsZzOsiz3oyjD3mU+0mMvQfdGoTpRAkualyAKmyAnAAAArB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzpEgZF/az8JKDuxPTUeMP44NSS0oJ4l9SCnPzK+PDUJMeCAn0Ai2p6GtYAAAA=[0mStage_1_Setup_Deploy_WebApp" build number [8mha:////4ISpTM8ooEb77enqpIW2XVlZcZmHVYnQkB77N1naDnBDAAAArB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBiX9rPwkoO7E9NR4w/jg1JLSgniX1IKc/Mr48NQkx4ICfVMAC8Ght9cAAAA=[0m5
+ originally caused by:
+  Started by user [8mha:////4EINkqsf5bL2wTVc4hWK8xaujnXgeIaTtqHVr7a5/p0iAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZu/dLi1CL9xJTczDwACG0V4sAAAAA=[0mLjubo Nikolic
+Building in workspace /var/lib/jenkins/workspace/__destroy__WebApp
+[__destroy__WebApp] $ /bin/sh -xe /tmp/jenkins7882647969029562086.sh
++ cd /home/ec2-user/webapp-aws-terraform
++ terraform destroy --force
+[0m[1maws_vpc.default: Refreshing state... (ID: vpc-e9ccc290)[0m
+[0m[1maws_key_pair.ljubon-key-webapp: Refreshing state... (ID: ljubon-key-webapp)[0m
+[0m[1maws_security_group.nat: Refreshing state... (ID: sg-19d62e6a)[0m
+[0m[1maws_subnet.us-east-1-private: Refreshing state... (ID: subnet-1daf8031)[0m
+[0m[1maws_subnet.us-east-1-public: Refreshing state... (ID: subnet-39a38c15)[0m
+[0m[1maws_security_group.web: Refreshing state... (ID: sg-f2cc3481)[0m
+[0m[1maws_internet_gateway.default: Refreshing state... (ID: igw-1455b56d)[0m
+[0m[1maws_security_group.db: Refreshing state... (ID: sg-12cb3361)[0m
+[0m[1maws_instance.web-1: Refreshing state... (ID: i-07e90ad90f9d97a0a)[0m
+[0m[1maws_instance.nat: Refreshing state... (ID: i-05006ef452d3540d9)[0m
+[0m[1maws_route_table.us-east-1-public: Refreshing state... (ID: rtb-bde494c6)[0m
+[0m[1maws_route_table_association.us-east-1-public: Refreshing state... (ID: rtbassoc-95bfefef)[0m
+[0m[1maws_route_table_association.us-east-1-public: Destroying... (ID: rtbassoc-95bfefef)[0m[0m
+[0m[1maws_instance.web-1: Destroying... (ID: i-07e90ad90f9d97a0a)[0m[0m
+[0m[1maws_instance.nat: Destroying... (ID: i-05006ef452d3540d9)[0m[0m
+[0m[1maws_key_pair.ljubon-key-webapp: Destroying... (ID: ljubon-key-webapp)[0m[0m
+[0m[1maws_security_group.db: Destroying... (ID: sg-12cb3361)[0m[0m
+[0m[1maws_subnet.us-east-1-private: Destroying... (ID: subnet-1daf8031)[0m[0m
+[0m[1maws_route_table_association.us-east-1-public: Destruction complete after 0s[0m[0m
+[0m[1maws_route_table.us-east-1-public: Destroying... (ID: rtb-bde494c6)[0m[0m
+[0m[1maws_key_pair.ljubon-key-webapp: Destruction complete after 0s[0m[0m
+[0m[1maws_subnet.us-east-1-private: Destruction complete after 1s[0m[0m
+[0m[1maws_security_group.db: Destruction complete after 1s[0m[0m
+[0m[1maws_route_table.us-east-1-public: Destruction complete after 2s[0m[0m
+[0m[1maws_internet_gateway.default: Destroying... (ID: igw-1455b56d)[0m[0m
+[0m[1maws_instance.nat: Still destroying... (ID: i-05006ef452d3540d9, 10s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still destroying... (ID: i-07e90ad90f9d97a0a, 10s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-1455b56d, 10s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still destroying... (ID: i-07e90ad90f9d97a0a, 20s elapsed)[0m[0m
+[0m[1maws_instance.nat: Still destroying... (ID: i-05006ef452d3540d9, 20s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-1455b56d, 20s elapsed)[0m[0m
+[0m[1maws_instance.nat: Still destroying... (ID: i-05006ef452d3540d9, 30s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still destroying... (ID: i-07e90ad90f9d97a0a, 30s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-1455b56d, 30s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still destroying... (ID: i-07e90ad90f9d97a0a, 40s elapsed)[0m[0m
+[0m[1maws_instance.nat: Still destroying... (ID: i-05006ef452d3540d9, 40s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-1455b56d, 40s elapsed)[0m[0m
+[0m[1maws_instance.nat: Still destroying... (ID: i-05006ef452d3540d9, 50s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still destroying... (ID: i-07e90ad90f9d97a0a, 50s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-1455b56d, 50s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still destroying... (ID: i-07e90ad90f9d97a0a, 1m0s elapsed)[0m[0m
+[0m[1maws_instance.nat: Still destroying... (ID: i-05006ef452d3540d9, 1m0s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Still destroying... (ID: igw-1455b56d, 1m0s elapsed)[0m[0m
+[0m[1maws_internet_gateway.default: Destruction complete after 1m1s[0m[0m
+[0m[1maws_instance.web-1: Destruction complete after 1m3s[0m[0m
+[0m[1maws_security_group.web: Destroying... (ID: sg-f2cc3481)[0m[0m
+[0m[1maws_security_group.web: Destruction complete after 1s[0m[0m
+[0m[1maws_instance.nat: Still destroying... (ID: i-05006ef452d3540d9, 1m10s elapsed)[0m[0m
+[0m[1maws_instance.nat: Destruction complete after 1m13s[0m[0m
+[0m[1maws_security_group.nat: Destroying... (ID: sg-19d62e6a)[0m[0m
+[0m[1maws_subnet.us-east-1-public: Destroying... (ID: subnet-39a38c15)[0m[0m
+[0m[1maws_subnet.us-east-1-public: Destruction complete after 0s[0m[0m
+[0m[1maws_security_group.nat: Destruction complete after 1s[0m[0m
+[0m[1maws_vpc.default: Destroying... (ID: vpc-e9ccc290)[0m[0m
+[0m[1maws_vpc.default: Destruction complete after 0s[0m[0m
+[0m[1m[32m
+Destroy complete! Resources: 12 destroyed.[0m
+[WS-CLEANUP] Deleting project workspace...[WS-CLEANUP] done
+Triggering a new build of [8mha:////4OkDved0j6E4zHDdNlejEB7UMqQBw4lEJExbRyaU8c/BAAAAox+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzBEgZx/az8JP34+OSc1MS80oL4+PDUJMeCAn0A85orRMwAAAA=[0m__cleanup__WebApp
+[parameterized-trigger] Downstream builds will not be triggered as no parameter is set.
+Finished: SUCCESS

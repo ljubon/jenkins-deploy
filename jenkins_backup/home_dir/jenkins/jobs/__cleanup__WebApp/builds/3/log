@@ -1,0 +1,13 @@
+Started by upstream project "[8mha:////4NRCnzoteFL/ljiKS7dJA7BqeQvSJ7PCNg8cdXcqP1i4AAAAox+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzBEgZx/az8JP34+JTU4pKi/Mr4+PDUJMeCAn0AAgCmQcwAAAA=[0m__destroy__WebApp" build number [8mha:////4NcE8z7/3HtQ5QbjZ2hSSVqW4LYRcsBYTw4V8AAddS5uAAAAox+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBgn9rPwk/fj4lNTikqL8yvj48NQkx4ICfVMATVL6k80AAAA=[0m5
+originally caused by:
+ Started by upstream project "[8mha:////4N4Er/7iiEAzRimzDORqS3RmHiKB5CVL4XJWFk1qeZxOAAAArx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy5EgYV/az8JKDuxPTUeKN4l9SCnPzKeM+84pLE5NTi+PDUJMeCAn0Ahelb/NkAAAA=[0mStage_2_Deploy_Instaces_WebApp" build number [8mha:////4K7p3+0CVun4hhxNtNDzWTXl+VQMe306TjiqHf+algTyAAAArx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBlX9rPwkoO7E9NR4o3iX1IKc/Mp4z7ziksTk1OL48NQkx4ICfSMAGTIPiNoAAAA=[0m2
+ originally caused by:
+  Started by upstream project "[8mha:////4AwvsZzOsiz3oyjD3mU+0mMvQfdGoTpRAkualyAKmyAnAAAArB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzpEgZF/az8JKDuxPTUeMP44NSS0oJ4l9SCnPzK+PDUJMeCAn0Ai2p6GtYAAAA=[0mStage_1_Setup_Deploy_WebApp" build number [8mha:////4ISpTM8ooEb77enqpIW2XVlZcZmHVYnQkB77N1naDnBDAAAArB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBiX9rPwkoO7E9NR4w/jg1JLSgniX1IKc/Mr48NQkx4ICfVMAC8Ght9cAAAA=[0m5
+  originally caused by:
+   Started by user [8mha:////4EINkqsf5bL2wTVc4hWK8xaujnXgeIaTtqHVr7a5/p0iAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZu/dLi1CL9xJTczDwACG0V4sAAAAA=[0mLjubo Nikolic
+Building in workspace /var/lib/jenkins/workspace/__cleanup__WebApp
+[__cleanup__WebApp] $ /bin/sh -xe /tmp/jenkins5618891337286429214.sh
++ cd /home/ec2-user/
++ rm -rf webapp-aws-terraform
+[WS-CLEANUP] Deleting project workspace...[WS-CLEANUP] done
+Finished: SUCCESS

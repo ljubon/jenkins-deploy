@@ -1,0 +1,999 @@
+Started by upstream project "[8mha:////4AwvsZzOsiz3oyjD3mU+0mMvQfdGoTpRAkualyAKmyAnAAAArB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzpEgZF/az8JKDuxPTUeMP44NSS0oJ4l9SCnPzK+PDUJMeCAn0Ai2p6GtYAAAA=[0mStage_1_Setup_Deploy_WebApp" build number [8mha:////4ISpTM8ooEb77enqpIW2XVlZcZmHVYnQkB77N1naDnBDAAAArB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBiX9rPwkoO7E9NR4w/jg1JLSgniX1IKc/Mr48NQkx4ICfVMAC8Ght9cAAAA=[0m5
+originally caused by:
+ Started by user [8mha:////4EINkqsf5bL2wTVc4hWK8xaujnXgeIaTtqHVr7a5/p0iAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZu/dLi1CL9xJTczDwACG0V4sAAAAA=[0mLjubo Nikolic
+Building in workspace /var/lib/jenkins/workspace/Stage_2_Deploy_Instaces_WebApp
+[Stage_2_Deploy_Instaces_WebApp] $ /bin/sh -xe /tmp/jenkins2239584995941605663.sh
++ cd /home/ec2-user/webapp-aws-terraform/
++ terraform plan
+[0m[1mRefreshing Terraform state in-memory prior to plan...[0m
+The refreshed state will be used to calculate this plan, but will not be
+persisted to local or remote state storage.
+[0m
+
+------------------------------------------------------------------------
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  [32m+[0m create
+[0m
+Terraform will perform the following actions:
+
+[32m  [32m+[0m [32maws_eip.nat
+[0m      id:                                          <computed>
+      allocation_id:                               <computed>
+      association_id:                              <computed>
+      domain:                                      <computed>
+      instance:                                    "${aws_instance.nat.id}"
+      network_interface:                           <computed>
+      private_ip:                                  <computed>
+      public_ip:                                   <computed>
+      vpc:                                         "true"
+[0m
+[0m[32m  [32m+[0m [32maws_eip.web-1
+[0m      id:                                          <computed>
+      allocation_id:                               <computed>
+      association_id:                              <computed>
+      domain:                                      <computed>
+      instance:                                    "${aws_instance.web-1.id}"
+      network_interface:                           <computed>
+      private_ip:                                  <computed>
+      public_ip:                                   <computed>
+      vpc:                                         "true"
+[0m
+[0m[32m  [32m+[0m [32maws_instance.db-1
+[0m      id:                                          <computed>
+      ami:                                         "ami-c998b6b2"
+      associate_public_ip_address:                 <computed>
+      availability_zone:                           "us-east-1a"
+      ebs_block_device.#:                          <computed>
+      ephemeral_block_device.#:                    <computed>
+      instance_state:                              <computed>
+      instance_type:                               "t2.micro"
+      ipv6_address_count:                          <computed>
+      ipv6_addresses.#:                            <computed>
+      key_name:                                    "ljubon-key-webapp"
+      network_interface.#:                         <computed>
+      network_interface_id:                        <computed>
+      placement_group:                             <computed>
+      primary_network_interface_id:                <computed>
+      private_dns:                                 <computed>
+      private_ip:                                  "10.0.1.100"
+      public_dns:                                  <computed>
+      public_ip:                                   <computed>
+      root_block_device.#:                         <computed>
+      security_groups.#:                           <computed>
+      source_dest_check:                           "false"
+      subnet_id:                                   "${aws_subnet.us-east-1-private.id}"
+      tags.%:                                      "1"
+      tags.Name:                                   "DB Server 1"
+      tenancy:                                     <computed>
+      volume_tags.%:                               <computed>
+      vpc_security_group_ids.#:                    <computed>
+[0m
+[0m[32m  [32m+[0m [32maws_instance.nat
+[0m      id:                                          <computed>
+      ami:                                         "ami-293a183f"
+      associate_public_ip_address:                 "true"
+      availability_zone:                           "us-east-1a"
+      ebs_block_device.#:                          <computed>
+      ephemeral_block_device.#:                    <computed>
+      instance_state:                              <computed>
+      instance_type:                               "t2.micro"
+      ipv6_address_count:                          <computed>
+      ipv6_addresses.#:                            <computed>
+      key_name:                                    "ljubon-key-webapp"
+      network_interface.#:                         <computed>
+      network_interface_id:                        <computed>
+      placement_group:                             <computed>
+      primary_network_interface_id:                <computed>
+      private_dns:                                 <computed>
+      private_ip:                                  "10.0.0.10"
+      public_dns:                                  <computed>
+      public_ip:                                   <computed>
+      root_block_device.#:                         <computed>
+      security_groups.#:                           <computed>
+      source_dest_check:                           "false"
+      subnet_id:                                   "${aws_subnet.us-east-1-public.id}"
+      tags.%:                                      "1"
+      tags.Name:                                   "VPC NAT"
+      tenancy:                                     <computed>
+      volume_tags.%:                               <computed>
+      vpc_security_group_ids.#:                    <computed>
+[0m
+[0m[32m  [32m+[0m [32maws_instance.web-1
+[0m      id:                                          <computed>
+      ami:                                         "ami-c998b6b2"
+      associate_public_ip_address:                 "true"
+      availability_zone:                           "us-east-1a"
+      ebs_block_device.#:                          <computed>
+      ephemeral_block_device.#:                    <computed>
+      instance_state:                              <computed>
+      instance_type:                               "t2.micro"
+      ipv6_address_count:                          <computed>
+      ipv6_addresses.#:                            <computed>
+      key_name:                                    "ljubon-key-webapp"
+      network_interface.#:                         <computed>
+      network_interface_id:                        <computed>
+      placement_group:                             <computed>
+      primary_network_interface_id:                <computed>
+      private_dns:                                 <computed>
+      private_ip:                                  "10.0.0.100"
+      public_dns:                                  <computed>
+      public_ip:                                   <computed>
+      root_block_device.#:                         <computed>
+      security_groups.#:                           <computed>
+      source_dest_check:                           "false"
+      subnet_id:                                   "${aws_subnet.us-east-1-public.id}"
+      tags.%:                                      "1"
+      tags.Name:                                   "Web Server 1"
+      tenancy:                                     <computed>
+      volume_tags.%:                               <computed>
+      vpc_security_group_ids.#:                    <computed>
+[0m
+[0m[32m  [32m+[0m [32maws_internet_gateway.default
+[0m      id:                                          <computed>
+      tags.%:                                      "1"
+      tags.Name:                                   "InternetGateway"
+      vpc_id:                                      "${aws_vpc.default.id}"
+[0m
+[0m[32m  [32m+[0m [32maws_key_pair.ljubon-key-webapp
+[0m      id:                                          <computed>
+      fingerprint:                                 <computed>
+      key_name:                                    "ljubon-key-webapp"
+      public_key:                                  "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJnOvRvaAEjtSrIBHCLRdvtgEtCZTx4rsID1077k+0We5DN5XOFbvhwyRGTcrwfSSplRqOa8Ed1dYmOwgLzdmwqn7KU9nUXXBqOx6/5axD9Ai5JA6FQutv1dpB0uN9GNmutgM0rGsfPL6+8nS4USk+Yfc6atKLAse3/+VhTJ25QbW+VjdsX15Mh4PRBN/YY1LPaB0LnfsUnzi2nT6dqa21eoIb7C4j56bh6N00yxOnhzco0eXN0o0TjgqIhDEXbIgMlzsNswTNaBCHEsSrTS2Tg79XMnuFNFdxS4z22D6PTDAcnhnPhd1QQwgka6bSyw3B1q5WGDA6+YDgnjsPtFqx root@ip-10-0-0-99.eu-central-1.compute.internal"
+[0m
+[0m[32m  [32m+[0m [32maws_route_table.us-east-1-private
+[0m      id:                                          <computed>
+      propagating_vgws.#:                          <computed>
+      route.#:                                     "1"
+      route.~1001554054.cidr_block:                "0.0.0.0/0"
+      route.~1001554054.egress_only_gateway_id:    ""
+      route.~1001554054.gateway_id:                ""
+      route.~1001554054.instance_id:               "${aws_instance.nat.id}"
+      route.~1001554054.ipv6_cidr_block:           ""
+      route.~1001554054.nat_gateway_id:            ""
+      route.~1001554054.network_interface_id:      ""
+      route.~1001554054.vpc_peering_connection_id: ""
+      tags.%:                                      "1"
+      tags.Name:                                   "Private Subnet"
+      vpc_id:                                      "${aws_vpc.default.id}"
+[0m
+[0m[32m  [32m+[0m [32maws_route_table.us-east-1-public
+[0m      id:                                          <computed>
+      propagating_vgws.#:                          <computed>
+      route.#:                                     "1"
+      route.~244149437.cidr_block:                 "0.0.0.0/0"
+      route.~244149437.egress_only_gateway_id:     ""
+      route.~244149437.gateway_id:                 "${aws_internet_gateway.default.id}"
+      route.~244149437.instance_id:                ""
+      route.~244149437.ipv6_cidr_block:            ""
+      route.~244149437.nat_gateway_id:             ""
+      route.~244149437.network_interface_id:       ""
+      route.~244149437.vpc_peering_connection_id:  ""
+      tags.%:                                      "1"
+      tags.Name:                                   "Public Subnet"
+      vpc_id:                                      "${aws_vpc.default.id}"
+[0m
+[0m[32m  [32m+[0m [32maws_route_table_association.us-east-1-private
+[0m      id:                                          <computed>
+      route_table_id:                              "${aws_route_table.us-east-1-private.id}"
+      subnet_id:                                   "${aws_subnet.us-east-1-private.id}"
+[0m
+[0m[32m  [32m+[0m [32maws_route_table_association.us-east-1-public
+[0m      id:                                          <computed>
+      route_table_id:                              "${aws_route_table.us-east-1-public.id}"
+      subnet_id:                                   "${aws_subnet.us-east-1-public.id}"
+[0m
+[0m[32m  [32m+[0m [32maws_security_group.db
+[0m      id:                                          <computed>
+      description:                                 "Allow incoming database connections."
+      egress.#:                                    "2"
+      egress.2541437006.cidr_blocks.#:             "1"
+      egress.2541437006.cidr_blocks.0:             "0.0.0.0/0"
+      egress.2541437006.from_port:                 "22"
+      egress.2541437006.ipv6_cidr_blocks.#:        "0"
+      egress.2541437006.prefix_list_ids.#:         "0"
+      egress.2541437006.protocol:                  "tcp"
+      egress.2541437006.security_groups.#:         "0"
+      egress.2541437006.self:                      "false"
+      egress.2541437006.to_port:                   "22"
+      egress.2617001939.cidr_blocks.#:             "1"
+      egress.2617001939.cidr_blocks.0:             "0.0.0.0/0"
+      egress.2617001939.from_port:                 "443"
+      egress.2617001939.ipv6_cidr_blocks.#:        "0"
+      egress.2617001939.prefix_list_ids.#:         "0"
+      egress.2617001939.protocol:                  "tcp"
+      egress.2617001939.security_groups.#:         "0"
+      egress.2617001939.self:                      "false"
+      egress.2617001939.to_port:                   "443"
+      ingress.#:                                   "5"
+      ingress.1799340084.cidr_blocks.#:            "1"
+      ingress.1799340084.cidr_blocks.0:            "0.0.0.0/0"
+      ingress.1799340084.from_port:                "-1"
+      ingress.1799340084.ipv6_cidr_blocks.#:       "0"
+      ingress.1799340084.protocol:                 "icmp"
+      ingress.1799340084.security_groups.#:        "0"
+      ingress.1799340084.self:                     "false"
+      ingress.1799340084.to_port:                  "-1"
+      ingress.2541437006.cidr_blocks.#:            "1"
+      ingress.2541437006.cidr_blocks.0:            "0.0.0.0/0"
+      ingress.2541437006.from_port:                "22"
+      ingress.2541437006.ipv6_cidr_blocks.#:       "0"
+      ingress.2541437006.protocol:                 "tcp"
+      ingress.2541437006.security_groups.#:        "0"
+      ingress.2541437006.self:                     "false"
+      ingress.2541437006.to_port:                  "22"
+      ingress.~1793672183.cidr_blocks.#:           "0"
+      ingress.~1793672183.from_port:               "1433"
+      ingress.~1793672183.ipv6_cidr_blocks.#:      "0"
+      ingress.~1793672183.protocol:                "tcp"
+      ingress.~1793672183.security_groups.#:       <computed>
+      ingress.~1793672183.self:                    "false"
+      ingress.~1793672183.to_port:                 "1433"
+      ingress.~3457728489.cidr_blocks.#:           "0"
+      ingress.~3457728489.from_port:               "22"
+      ingress.~3457728489.ipv6_cidr_blocks.#:      "0"
+      ingress.~3457728489.protocol:                "tcp"
+      ingress.~3457728489.security_groups.#:       <computed>
+      ingress.~3457728489.self:                    "false"
+      ingress.~3457728489.to_port:                 "22"
+      ingress.~471043921.cidr_blocks.#:            "0"
+      ingress.~471043921.from_port:                "3306"
+      ingress.~471043921.ipv6_cidr_blocks.#:       "0"
+      ingress.~471043921.protocol:                 "tcp"
+      ingress.~471043921.security_groups.#:        <computed>
+      ingress.~471043921.self:                     "false"
+      ingress.~471043921.to_port:                  "3306"
+      name:                                        "vpc_db"
+      owner_id:                                    <computed>
+      tags.%:                                      "1"
+      tags.Name:                                   "DBServerSG"
+      vpc_id:                                      "${aws_vpc.default.id}"
+[0m
+[0m[32m  [32m+[0m [32maws_security_group.nat
+[0m      id:                                          <computed>
+      description:                                 "Allow traffic to pass from the private subnet to the internet"
+      egress.#:                                    "4"
+      egress.1799340084.cidr_blocks.#:             "1"
+      egress.1799340084.cidr_blocks.0:             "0.0.0.0/0"
+      egress.1799340084.from_port:                 "-1"
+      egress.1799340084.ipv6_cidr_blocks.#:        "0"
+      egress.1799340084.prefix_list_ids.#:         "0"
+      egress.1799340084.protocol:                  "icmp"
+      egress.1799340084.security_groups.#:         "0"
+      egress.1799340084.self:                      "false"
+      egress.1799340084.to_port:                   "-1"
+      egress.2214680975.cidr_blocks.#:             "1"
+      egress.2214680975.cidr_blocks.0:             "0.0.0.0/0"
+      egress.2214680975.from_port:                 "80"
+      egress.2214680975.ipv6_cidr_blocks.#:        "0"
+      egress.2214680975.prefix_list_ids.#:         "0"
+      egress.2214680975.protocol:                  "tcp"
+      egress.2214680975.security_groups.#:         "0"
+      egress.2214680975.self:                      "false"
+      egress.2214680975.to_port:                   "80"
+      egress.2617001939.cidr_blocks.#:             "1"
+      egress.2617001939.cidr_blocks.0:             "0.0.0.0/0"
+      egress.2617001939.from_port:                 "443"
+      egress.2617001939.ipv6_cidr_blocks.#:        "0"
+      egress.2617001939.prefix_list_ids.#:         "0"
+      egress.2617001939.protocol:                  "tcp"
+      egress.2617001939.security_groups.#:         "0"
+      egress.2617001939.self:                      "false"
+      egress.2617001939.to_port:                   "443"
+      egress.931551850.cidr_blocks.#:              "1"
+      egress.931551850.cidr_blocks.0:              "10.0.0.0/16"
+      egress.931551850.from_port:                  "22"
+      egress.931551850.ipv6_cidr_blocks.#:         "0"
+      egress.931551850.prefix_list_ids.#:          "0"
+      egress.931551850.protocol:                   "tcp"
+      egress.931551850.security_groups.#:          "0"
+      egress.931551850.self:                       "false"
+      egress.931551850.to_port:                    "22"
+      ingress.#:                                   "4"
+      ingress.1799340084.cidr_blocks.#:            "1"
+      ingress.1799340084.cidr_blocks.0:            "0.0.0.0/0"
+      ingress.1799340084.from_port:                "-1"
+      ingress.1799340084.ipv6_cidr_blocks.#:       "0"
+      ingress.1799340084.protocol:                 "icmp"
+      ingress.1799340084.security_groups.#:        "0"
+      ingress.1799340084.self:                     "false"
+      ingress.1799340084.to_port:                  "-1"
+      ingress.1829582617.cidr_blocks.#:            "1"
+      ingress.1829582617.cidr_blocks.0:            "10.0.0.0/16"
+      ingress.1829582617.from_port:                "443"
+      ingress.1829582617.ipv6_cidr_blocks.#:       "0"
+      ingress.1829582617.protocol:                 "tcp"
+      ingress.1829582617.security_groups.#:        "0"
+      ingress.1829582617.self:                     "false"
+      ingress.1829582617.to_port:                  "443"
+      ingress.2165049311.cidr_blocks.#:            "1"
+      ingress.2165049311.cidr_blocks.0:            "10.0.0.0/16"
+      ingress.2165049311.from_port:                "80"
+      ingress.2165049311.ipv6_cidr_blocks.#:       "0"
+      ingress.2165049311.protocol:                 "tcp"
+      ingress.2165049311.security_groups.#:        "0"
+      ingress.2165049311.self:                     "false"
+      ingress.2165049311.to_port:                  "80"
+      ingress.2541437006.cidr_blocks.#:            "1"
+      ingress.2541437006.cidr_blocks.0:            "0.0.0.0/0"
+      ingress.2541437006.from_port:                "22"
+      ingress.2541437006.ipv6_cidr_blocks.#:       "0"
+      ingress.2541437006.protocol:                 "tcp"
+      ingress.2541437006.security_groups.#:        "0"
+      ingress.2541437006.self:                     "false"
+      ingress.2541437006.to_port:                  "22"
+      name:                                        "vpc_nat"
+      owner_id:                                    <computed>
+      tags.%:                                      "1"
+      tags.Name:                                   "NATSG"
+      vpc_id:                                      "${aws_vpc.default.id}"
+[0m
+[0m[32m  [32m+[0m [32maws_security_group.web
+[0m      id:                                          <computed>
+      description:                                 "Allow incoming HTTP connections."
+      egress.#:                                    "4"
+      egress.2176283147.cidr_blocks.#:             "1"
+      egress.2176283147.cidr_blocks.0:             "10.0.1.0/24"
+      egress.2176283147.from_port:                 "1433"
+      egress.2176283147.ipv6_cidr_blocks.#:        "0"
+      egress.2176283147.prefix_list_ids.#:         "0"
+      egress.2176283147.protocol:                  "tcp"
+      egress.2176283147.security_groups.#:         "0"
+      egress.2176283147.self:                      "false"
+      egress.2176283147.to_port:                   "1433"
+      egress.482069346.cidr_blocks.#:              "1"
+      egress.482069346.cidr_blocks.0:              "0.0.0.0/0"
+      egress.482069346.from_port:                  "0"
+      egress.482069346.ipv6_cidr_blocks.#:         "0"
+      egress.482069346.prefix_list_ids.#:          "0"
+      egress.482069346.protocol:                   "-1"
+      egress.482069346.security_groups.#:          "0"
+      egress.482069346.self:                       "false"
+      egress.482069346.to_port:                    "0"
+      egress.931551850.cidr_blocks.#:              "1"
+      egress.931551850.cidr_blocks.0:              "10.0.0.0/16"
+      egress.931551850.from_port:                  "22"
+      egress.931551850.ipv6_cidr_blocks.#:         "0"
+      egress.931551850.prefix_list_ids.#:          "0"
+      egress.931551850.protocol:                   "tcp"
+      egress.931551850.security_groups.#:          "0"
+      egress.931551850.self:                       "false"
+      egress.931551850.to_port:                    "22"
+      egress.957905739.cidr_blocks.#:              "1"
+      egress.957905739.cidr_blocks.0:              "10.0.1.0/24"
+      egress.957905739.from_port:                  "3306"
+      egress.957905739.ipv6_cidr_blocks.#:         "0"
+      egress.957905739.prefix_list_ids.#:          "0"
+      egress.957905739.protocol:                   "tcp"
+      egress.957905739.security_groups.#:          "0"
+      egress.957905739.self:                       "false"
+      egress.957905739.to_port:                    "3306"
+      ingress.#:                                   "5"
+      ingress.1799340084.cidr_blocks.#:            "1"
+      ingress.1799340084.cidr_blocks.0:            "0.0.0.0/0"
+      ingress.1799340084.from_port:                "-1"
+      ingress.1799340084.ipv6_cidr_blocks.#:       "0"
+      ingress.1799340084.protocol:                 "icmp"
+      ingress.1799340084.security_groups.#:        "0"
+      ingress.1799340084.self:                     "false"
+      ingress.1799340084.to_port:                  "-1"
+      ingress.2214680975.cidr_blocks.#:            "1"
+      ingress.2214680975.cidr_blocks.0:            "0.0.0.0/0"
+      ingress.2214680975.from_port:                "80"
+      ingress.2214680975.ipv6_cidr_blocks.#:       "0"
+      ingress.2214680975.protocol:                 "tcp"
+      ingress.2214680975.security_groups.#:        "0"
+      ingress.2214680975.self:                     "false"
+      ingress.2214680975.to_port:                  "80"
+      ingress.2541437006.cidr_blocks.#:            "1"
+      ingress.2541437006.cidr_blocks.0:            "0.0.0.0/0"
+      ingress.2541437006.from_port:                "22"
+      ingress.2541437006.ipv6_cidr_blocks.#:       "0"
+      ingress.2541437006.protocol:                 "tcp"
+      ingress.2541437006.security_groups.#:        "0"
+      ingress.2541437006.self:                     "false"
+      ingress.2541437006.to_port:                  "22"
+      ingress.2617001939.cidr_blocks.#:            "1"
+      ingress.2617001939.cidr_blocks.0:            "0.0.0.0/0"
+      ingress.2617001939.from_port:                "443"
+      ingress.2617001939.ipv6_cidr_blocks.#:       "0"
+      ingress.2617001939.protocol:                 "tcp"
+      ingress.2617001939.security_groups.#:        "0"
+      ingress.2617001939.self:                     "false"
+      ingress.2617001939.to_port:                  "443"
+      ingress.482069346.cidr_blocks.#:             "1"
+      ingress.482069346.cidr_blocks.0:             "0.0.0.0/0"
+      ingress.482069346.from_port:                 "0"
+      ingress.482069346.ipv6_cidr_blocks.#:        "0"
+      ingress.482069346.protocol:                  "-1"
+      ingress.482069346.security_groups.#:         "0"
+      ingress.482069346.self:                      "false"
+      ingress.482069346.to_port:                   "0"
+      name:                                        "vpc_web"
+      owner_id:                                    <computed>
+      tags.%:                                      "1"
+      tags.Name:                                   "WebServerSG"
+      vpc_id:                                      "${aws_vpc.default.id}"
+[0m
+[0m[32m  [32m+[0m [32maws_subnet.us-east-1-private
+[0m      id:                                          <computed>
+      assign_ipv6_address_on_creation:             "false"
+      availability_zone:                           "us-east-1a"
+      cidr_block:                                  "10.0.1.0/24"
+      ipv6_cidr_block:                             <computed>
+      ipv6_cidr_block_association_id:              <computed>
+      map_public_ip_on_launch:                     "false"
+      tags.%:                                      "1"
+      tags.Name:                                   "Private Subnet"
+      vpc_id:                                      "${aws_vpc.default.id}"
+[0m
+[0m[32m  [32m+[0m [32maws_subnet.us-east-1-public
+[0m      id:                                          <computed>
+      assign_ipv6_address_on_creation:             "false"
+      availability_zone:                           "us-east-1a"
+      cidr_block:                                  "10.0.0.0/24"
+      ipv6_cidr_block:                             <computed>
+      ipv6_cidr_block_association_id:              <computed>
+      map_public_ip_on_launch:                     "false"
+      tags.%:                                      "1"
+      tags.Name:                                   "Public Subnet"
+      vpc_id:                                      "${aws_vpc.default.id}"
+[0m
+[0m[32m  [32m+[0m [32maws_vpc.default
+[0m      id:                                          <computed>
+      assign_generated_ipv6_cidr_block:            "false"
+      cidr_block:                                  "10.0.0.0/16"
+      default_network_acl_id:                      <computed>
+      default_route_table_id:                      <computed>
+      default_security_group_id:                   <computed>
+      dhcp_options_id:                             <computed>
+      enable_classiclink:                          <computed>
+      enable_classiclink_dns_support:              <computed>
+      enable_dns_hostnames:                        "true"
+      enable_dns_support:                          "true"
+      instance_tenancy:                            <computed>
+      ipv6_association_id:                         <computed>
+      ipv6_cidr_block:                             <computed>
+      main_route_table_id:                         <computed>
+      tags.%:                                      "1"
+      tags.Name:                                   "webapp-aws-vpc"
+[0m
+[0m
+[0m[1mPlan:[0m 17 to add, 0 to change, 0 to destroy.[0m
+
+------------------------------------------------------------------------
+
+Note: You didn't specify an "-out" parameter to save this plan, so Terraform
+can't guarantee that exactly these actions will be performed if
+"terraform apply" is subsequently run.
+
++ terraform apply
+[0m[1maws_key_pair.ljubon-key-webapp: Creating...[0m
+  fingerprint: "" => "<computed>"
+  key_name:    "" => "ljubon-key-webapp"
+  public_key:  "" => "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJnOvRvaAEjtSrIBHCLRdvtgEtCZTx4rsID1077k+0We5DN5XOFbvhwyRGTcrwfSSplRqOa8Ed1dYmOwgLzdmwqn7KU9nUXXBqOx6/5axD9Ai5JA6FQutv1dpB0uN9GNmutgM0rGsfPL6+8nS4USk+Yfc6atKLAse3/+VhTJ25QbW+VjdsX15Mh4PRBN/YY1LPaB0LnfsUnzi2nT6dqa21eoIb7C4j56bh6N00yxOnhzco0eXN0o0TjgqIhDEXbIgMlzsNswTNaBCHEsSrTS2Tg79XMnuFNFdxS4z22D6PTDAcnhnPhd1QQwgka6bSyw3B1q5WGDA6+YDgnjsPtFqx root@ip-10-0-0-99.eu-central-1.compute.internal"[0m
+[0m[1maws_vpc.default: Creating...[0m
+  assign_generated_ipv6_cidr_block: "" => "false"
+  cidr_block:                       "" => "10.0.0.0/16"
+  default_network_acl_id:           "" => "<computed>"
+  default_route_table_id:           "" => "<computed>"
+  default_security_group_id:        "" => "<computed>"
+  dhcp_options_id:                  "" => "<computed>"
+  enable_classiclink:               "" => "<computed>"
+  enable_classiclink_dns_support:   "" => "<computed>"
+  enable_dns_hostnames:             "" => "true"
+  enable_dns_support:               "" => "true"
+  instance_tenancy:                 "" => "<computed>"
+  ipv6_association_id:              "" => "<computed>"
+  ipv6_cidr_block:                  "" => "<computed>"
+  main_route_table_id:              "" => "<computed>"
+  tags.%:                           "" => "1"
+  tags.Name:                        "" => "webapp-aws-vpc"[0m
+[0m[1maws_key_pair.ljubon-key-webapp: Creation complete after 0s (ID: ljubon-key-webapp)[0m[0m
+[0m[1maws_vpc.default: Creation complete after 6s (ID: vpc-e9ccc290)[0m[0m
+[0m[1maws_subnet.us-east-1-public: Creating...[0m
+  assign_ipv6_address_on_creation: "" => "false"
+  availability_zone:               "" => "us-east-1a"
+  cidr_block:                      "" => "10.0.0.0/24"
+  ipv6_cidr_block:                 "" => "<computed>"
+  ipv6_cidr_block_association_id:  "" => "<computed>"
+  map_public_ip_on_launch:         "" => "false"
+  tags.%:                          "" => "1"
+  tags.Name:                       "" => "Public Subnet"
+  vpc_id:                          "" => "vpc-e9ccc290"[0m
+[0m[1maws_subnet.us-east-1-private: Creating...[0m
+  assign_ipv6_address_on_creation: "" => "false"
+  availability_zone:               "" => "us-east-1a"
+  cidr_block:                      "" => "10.0.1.0/24"
+  ipv6_cidr_block:                 "" => "<computed>"
+  ipv6_cidr_block_association_id:  "" => "<computed>"
+  map_public_ip_on_launch:         "" => "false"
+  tags.%:                          "" => "1"
+  tags.Name:                       "" => "Private Subnet"
+  vpc_id:                          "" => "vpc-e9ccc290"[0m
+[0m[1maws_security_group.nat: Creating...[0m
+  description:                           "" => "Allow traffic to pass from the private subnet to the internet"
+  egress.#:                              "" => "4"
+  egress.1799340084.cidr_blocks.#:       "" => "1"
+  egress.1799340084.cidr_blocks.0:       "" => "0.0.0.0/0"
+  egress.1799340084.from_port:           "" => "-1"
+  egress.1799340084.ipv6_cidr_blocks.#:  "" => "0"
+  egress.1799340084.prefix_list_ids.#:   "" => "0"
+  egress.1799340084.protocol:            "" => "icmp"
+  egress.1799340084.security_groups.#:   "" => "0"
+  egress.1799340084.self:                "" => "false"
+  egress.1799340084.to_port:             "" => "-1"
+  egress.2214680975.cidr_blocks.#:       "" => "1"
+  egress.2214680975.cidr_blocks.0:       "" => "0.0.0.0/0"
+  egress.2214680975.from_port:           "" => "80"
+  egress.2214680975.ipv6_cidr_blocks.#:  "" => "0"
+  egress.2214680975.prefix_list_ids.#:   "" => "0"
+  egress.2214680975.protocol:            "" => "tcp"
+  egress.2214680975.security_groups.#:   "" => "0"
+  egress.2214680975.self:                "" => "false"
+  egress.2214680975.to_port:             "" => "80"
+  egress.2617001939.cidr_blocks.#:       "" => "1"
+  egress.2617001939.cidr_blocks.0:       "" => "0.0.0.0/0"
+  egress.2617001939.from_port:           "" => "443"
+  egress.2617001939.ipv6_cidr_blocks.#:  "" => "0"
+  egress.2617001939.prefix_list_ids.#:   "" => "0"
+  egress.2617001939.protocol:            "" => "tcp"
+  egress.2617001939.security_groups.#:   "" => "0"
+  egress.2617001939.self:                "" => "false"
+  egress.2617001939.to_port:             "" => "443"
+  egress.931551850.cidr_blocks.#:        "" => "1"
+  egress.931551850.cidr_blocks.0:        "" => "10.0.0.0/16"
+  egress.931551850.from_port:            "" => "22"
+  egress.931551850.ipv6_cidr_blocks.#:   "" => "0"
+  egress.931551850.prefix_list_ids.#:    "" => "0"
+  egress.931551850.protocol:             "" => "tcp"
+  egress.931551850.security_groups.#:    "" => "0"
+  egress.931551850.self:                 "" => "false"
+  egress.931551850.to_port:              "" => "22"
+  ingress.#:                             "" => "4"
+  ingress.1799340084.cidr_blocks.#:      "" => "1"
+  ingress.1799340084.cidr_blocks.0:      "" => "0.0.0.0/0"
+  ingress.1799340084.from_port:          "" => "-1"
+  ingress.1799340084.ipv6_cidr_blocks.#: "" => "0"
+  ingress.1799340084.protocol:           "" => "icmp"
+  ingress.1799340084.security_groups.#:  "" => "0"
+  ingress.1799340084.self:               "" => "false"
+  ingress.1799340084.to_port:            "" => "-1"
+  ingress.1829582617.cidr_blocks.#:      "" => "1"
+  ingress.1829582617.cidr_blocks.0:      "" => "10.0.0.0/16"
+  ingress.1829582617.from_port:          "" => "443"
+  ingress.1829582617.ipv6_cidr_blocks.#: "" => "0"
+  ingress.1829582617.protocol:           "" => "tcp"
+  ingress.1829582617.security_groups.#:  "" => "0"
+  ingress.1829582617.self:               "" => "false"
+  ingress.1829582617.to_port:            "" => "443"
+  ingress.2165049311.cidr_blocks.#:      "" => "1"
+  ingress.2165049311.cidr_blocks.0:      "" => "10.0.0.0/16"
+  ingress.2165049311.from_port:          "" => "80"
+  ingress.2165049311.ipv6_cidr_blocks.#: "" => "0"
+  ingress.2165049311.protocol:           "" => "tcp"
+  ingress.2165049311.security_groups.#:  "" => "0"
+  ingress.2165049311.self:               "" => "false"
+  ingress.2165049311.to_port:            "" => "80"
+  ingress.2541437006.cidr_blocks.#:      "" => "1"
+  ingress.2541437006.cidr_blocks.0:      "" => "0.0.0.0/0"
+  ingress.2541437006.from_port:          "" => "22"
+  ingress.2541437006.ipv6_cidr_blocks.#: "" => "0"
+  ingress.2541437006.protocol:           "" => "tcp"
+  ingress.2541437006.security_groups.#:  "" => "0"
+  ingress.2541437006.self:               "" => "false"
+  ingress.2541437006.to_port:            "" => "22"
+  name:                                  "" => "vpc_nat"
+  owner_id:                              "" => "<computed>"
+  tags.%:                                "" => "1"
+  tags.Name:                             "" => "NATSG"
+  vpc_id:                                "" => "vpc-e9ccc290"[0m
+[0m[1maws_security_group.web: Creating...[0m
+  description:                           "" => "Allow incoming HTTP connections."
+  egress.#:                              "" => "4"
+  egress.2176283147.cidr_blocks.#:       "" => "1"
+  egress.2176283147.cidr_blocks.0:       "" => "10.0.1.0/24"
+  egress.2176283147.from_port:           "" => "1433"
+  egress.2176283147.ipv6_cidr_blocks.#:  "" => "0"
+  egress.2176283147.prefix_list_ids.#:   "" => "0"
+  egress.2176283147.protocol:            "" => "tcp"
+  egress.2176283147.security_groups.#:   "" => "0"
+  egress.2176283147.self:                "" => "false"
+  egress.2176283147.to_port:             "" => "1433"
+  egress.482069346.cidr_blocks.#:        "" => "1"
+  egress.482069346.cidr_blocks.0:        "" => "0.0.0.0/0"
+  egress.482069346.from_port:            "" => "0"
+  egress.482069346.ipv6_cidr_blocks.#:   "" => "0"
+  egress.482069346.prefix_list_ids.#:    "" => "0"
+  egress.482069346.protocol:             "" => "-1"
+  egress.482069346.security_groups.#:    "" => "0"
+  egress.482069346.self:                 "" => "false"
+  egress.482069346.to_port:              "" => "0"
+  egress.931551850.cidr_blocks.#:        "" => "1"
+  egress.931551850.cidr_blocks.0:        "" => "10.0.0.0/16"
+  egress.931551850.from_port:            "" => "22"
+  egress.931551850.ipv6_cidr_blocks.#:   "" => "0"
+  egress.931551850.prefix_list_ids.#:    "" => "0"
+  egress.931551850.protocol:             "" => "tcp"
+  egress.931551850.security_groups.#:    "" => "0"
+  egress.931551850.self:                 "" => "false"
+  egress.931551850.to_port:              "" => "22"
+  egress.957905739.cidr_blocks.#:        "" => "1"
+  egress.957905739.cidr_blocks.0:        "" => "10.0.1.0/24"
+  egress.957905739.from_port:            "" => "3306"
+  egress.957905739.ipv6_cidr_blocks.#:   "" => "0"
+  egress.957905739.prefix_list_ids.#:    "" => "0"
+  egress.957905739.protocol:             "" => "tcp"
+  egress.957905739.security_groups.#:    "" => "0"
+  egress.957905739.self:                 "" => "false"
+  egress.957905739.to_port:              "" => "3306"
+  ingress.#:                             "" => "5"
+  ingress.1799340084.cidr_blocks.#:      "" => "1"
+  ingress.1799340084.cidr_blocks.0:      "" => "0.0.0.0/0"
+  ingress.1799340084.from_port:          "" => "-1"
+  ingress.1799340084.ipv6_cidr_blocks.#: "" => "0"
+  ingress.1799340084.protocol:           "" => "icmp"
+  ingress.1799340084.security_groups.#:  "" => "0"
+  ingress.1799340084.self:               "" => "false"
+  ingress.1799340084.to_port:            "" => "-1"
+  ingress.2214680975.cidr_blocks.#:      "" => "1"
+  ingress.2214680975.cidr_blocks.0:      "" => "0.0.0.0/0"
+  ingress.2214680975.from_port:          "" => "80"
+  ingress.2214680975.ipv6_cidr_blocks.#: "" => "0"
+  ingress.2214680975.protocol:           "" => "tcp"
+  ingress.2214680975.security_groups.#:  "" => "0"
+  ingress.2214680975.self:               "" => "false"
+  ingress.2214680975.to_port:            "" => "80"
+  ingress.2541437006.cidr_blocks.#:      "" => "1"
+  ingress.2541437006.cidr_blocks.0:      "" => "0.0.0.0/0"
+  ingress.2541437006.from_port:          "" => "22"
+  ingress.2541437006.ipv6_cidr_blocks.#: "" => "0"
+  ingress.2541437006.protocol:           "" => "tcp"
+  ingress.2541437006.security_groups.#:  "" => "0"
+  ingress.2541437006.self:               "" => "false"
+  ingress.2541437006.to_port:            "" => "22"
+  ingress.2617001939.cidr_blocks.#:      "" => "1"
+  ingress.2617001939.cidr_blocks.0:      "" => "0.0.0.0/0"
+  ingress.2617001939.from_port:          "" => "443"
+  ingress.2617001939.ipv6_cidr_blocks.#: "" => "0"
+  ingress.2617001939.protocol:           "" => "tcp"
+  ingress.2617001939.security_groups.#:  "" => "0"
+  ingress.2617001939.self:               "" => "false"
+  ingress.2617001939.to_port:            "" => "443"
+  ingress.482069346.cidr_blocks.#:       "" => "1"
+  ingress.482069346.cidr_blocks.0:       "" => "0.0.0.0/0"
+  ingress.482069346.from_port:           "" => "0"
+  ingress.482069346.ipv6_cidr_blocks.#:  "" => "0"
+  ingress.482069346.protocol:            "" => "-1"
+  ingress.482069346.security_groups.#:   "" => "0"
+  ingress.482069346.self:                "" => "false"
+  ingress.482069346.to_port:             "" => "0"
+  name:                                  "" => "vpc_web"
+  owner_id:                              "" => "<computed>"
+  tags.%:                                "" => "1"
+  tags.Name:                             "" => "WebServerSG"
+  vpc_id:                                "" => "vpc-e9ccc290"[0m
+[0m[1maws_internet_gateway.default: Creating...[0m
+  tags.%:    "0" => "1"
+  tags.Name: "" => "InternetGateway"
+  vpc_id:    "" => "vpc-e9ccc290"[0m
+[0m[1maws_subnet.us-east-1-public: Creation complete after 2s (ID: subnet-39a38c15)[0m[0m
+[0m[1maws_subnet.us-east-1-private: Creation complete after 2s (ID: subnet-1daf8031)[0m[0m
+[0m[1maws_internet_gateway.default: Creation complete after 2s (ID: igw-1455b56d)[0m[0m
+[0m[1maws_route_table.us-east-1-public: Creating...[0m
+  propagating_vgws.#:                        "" => "<computed>"
+  route.#:                                   "" => "1"
+  route.860930855.cidr_block:                "" => "0.0.0.0/0"
+  route.860930855.egress_only_gateway_id:    "" => ""
+  route.860930855.gateway_id:                "" => "igw-1455b56d"
+  route.860930855.instance_id:               "" => ""
+  route.860930855.ipv6_cidr_block:           "" => ""
+  route.860930855.nat_gateway_id:            "" => ""
+  route.860930855.network_interface_id:      "" => ""
+  route.860930855.vpc_peering_connection_id: "" => ""
+  tags.%:                                    "" => "1"
+  tags.Name:                                 "" => "Public Subnet"
+  vpc_id:                                    "" => "vpc-e9ccc290"[0m
+[0m[1maws_security_group.nat: Creation complete after 4s (ID: sg-19d62e6a)[0m[0m
+[0m[1maws_instance.nat: Creating...[0m
+  ami:                              "" => "ami-293a183f"
+  associate_public_ip_address:      "" => "true"
+  availability_zone:                "" => "us-east-1a"
+  ebs_block_device.#:               "" => "<computed>"
+  ephemeral_block_device.#:         "" => "<computed>"
+  instance_state:                   "" => "<computed>"
+  instance_type:                    "" => "t2.micro"
+  ipv6_address_count:               "" => "<computed>"
+  ipv6_addresses.#:                 "" => "<computed>"
+  key_name:                         "" => "ljubon-key-webapp"
+  network_interface.#:              "" => "<computed>"
+  network_interface_id:             "" => "<computed>"
+  placement_group:                  "" => "<computed>"
+  primary_network_interface_id:     "" => "<computed>"
+  private_dns:                      "" => "<computed>"
+  private_ip:                       "" => "10.0.0.10"
+  public_dns:                       "" => "<computed>"
+  public_ip:                        "" => "<computed>"
+  root_block_device.#:              "" => "<computed>"
+  security_groups.#:                "" => "<computed>"
+  source_dest_check:                "" => "false"
+  subnet_id:                        "" => "subnet-39a38c15"
+  tags.%:                           "" => "1"
+  tags.Name:                        "" => "VPC NAT"
+  tenancy:                          "" => "<computed>"
+  volume_tags.%:                    "" => "<computed>"
+  vpc_security_group_ids.#:         "" => "1"
+  vpc_security_group_ids.583906737: "" => "sg-19d62e6a"[0m
+[0m[1maws_route_table.us-east-1-public: Creation complete after 2s (ID: rtb-bde494c6)[0m[0m
+[0m[1maws_route_table_association.us-east-1-public: Creating...[0m
+  route_table_id: "" => "rtb-bde494c6"
+  subnet_id:      "" => "subnet-39a38c15"[0m
+[0m[1maws_security_group.web: Creation complete after 4s (ID: sg-f2cc3481)[0m[0m
+[0m[1maws_instance.web-1: Creating...[0m
+  ami:                               "" => "ami-c998b6b2"
+  associate_public_ip_address:       "" => "true"
+  availability_zone:                 "" => "us-east-1a"
+  ebs_block_device.#:                "" => "<computed>"
+  ephemeral_block_device.#:          "" => "<computed>"
+  instance_state:                    "" => "<computed>"
+  instance_type:                     "" => "t2.micro"
+  ipv6_address_count:                "" => "<computed>"
+  ipv6_addresses.#:                  "" => "<computed>"
+  key_name:                          "" => "ljubon-key-webapp"
+  network_interface.#:               "" => "<computed>"
+  network_interface_id:              "" => "<computed>"
+  placement_group:                   "" => "<computed>"
+  primary_network_interface_id:      "" => "<computed>"
+  private_dns:                       "" => "<computed>"
+  private_ip:                        "" => "10.0.0.100"
+  public_dns:                        "" => "<computed>"
+  public_ip:                         "" => "<computed>"
+  root_block_device.#:               "" => "<computed>"
+  security_groups.#:                 "" => "<computed>"
+  source_dest_check:                 "" => "false"
+  subnet_id:                         "" => "subnet-39a38c15"
+  tags.%:                            "" => "1"
+  tags.Name:                         "" => "Web Server 1"
+  tenancy:                           "" => "<computed>"
+  volume_tags.%:                     "" => "<computed>"
+  vpc_security_group_ids.#:          "" => "1"
+  vpc_security_group_ids.3002414095: "" => "sg-f2cc3481"[0m
+[0m[1maws_security_group.db: Creating...[0m
+  description:                                   "" => "Allow incoming database connections."
+  egress.#:                                      "" => "2"
+  egress.2541437006.cidr_blocks.#:               "" => "1"
+  egress.2541437006.cidr_blocks.0:               "" => "0.0.0.0/0"
+  egress.2541437006.from_port:                   "" => "22"
+  egress.2541437006.ipv6_cidr_blocks.#:          "" => "0"
+  egress.2541437006.prefix_list_ids.#:           "" => "0"
+  egress.2541437006.protocol:                    "" => "tcp"
+  egress.2541437006.security_groups.#:           "" => "0"
+  egress.2541437006.self:                        "" => "false"
+  egress.2541437006.to_port:                     "" => "22"
+  egress.2617001939.cidr_blocks.#:               "" => "1"
+  egress.2617001939.cidr_blocks.0:               "" => "0.0.0.0/0"
+  egress.2617001939.from_port:                   "" => "443"
+  egress.2617001939.ipv6_cidr_blocks.#:          "" => "0"
+  egress.2617001939.prefix_list_ids.#:           "" => "0"
+  egress.2617001939.protocol:                    "" => "tcp"
+  egress.2617001939.security_groups.#:           "" => "0"
+  egress.2617001939.self:                        "" => "false"
+  egress.2617001939.to_port:                     "" => "443"
+  ingress.#:                                     "" => "5"
+  ingress.1524887975.cidr_blocks.#:              "" => "0"
+  ingress.1524887975.from_port:                  "" => "22"
+  ingress.1524887975.ipv6_cidr_blocks.#:         "" => "0"
+  ingress.1524887975.protocol:                   "" => "tcp"
+  ingress.1524887975.security_groups.#:          "" => "1"
+  ingress.1524887975.security_groups.3002414095: "" => "sg-f2cc3481"
+  ingress.1524887975.self:                       "" => "false"
+  ingress.1524887975.to_port:                    "" => "22"
+  ingress.1799340084.cidr_blocks.#:              "" => "1"
+  ingress.1799340084.cidr_blocks.0:              "" => "0.0.0.0/0"
+  ingress.1799340084.from_port:                  "" => "-1"
+  ingress.1799340084.ipv6_cidr_blocks.#:         "" => "0"
+  ingress.1799340084.protocol:                   "" => "icmp"
+  ingress.1799340084.security_groups.#:          "" => "0"
+  ingress.1799340084.self:                       "" => "false"
+  ingress.1799340084.to_port:                    "" => "-1"
+  ingress.2060783273.cidr_blocks.#:              "" => "0"
+  ingress.2060783273.from_port:                  "" => "1433"
+  ingress.2060783273.ipv6_cidr_blocks.#:         "" => "0"
+  ingress.2060783273.protocol:                   "" => "tcp"
+  ingress.2060783273.security_groups.#:          "" => "1"
+  ingress.2060783273.security_groups.3002414095: "" => "sg-f2cc3481"
+  ingress.2060783273.self:                       "" => "false"
+  ingress.2060783273.to_port:                    "" => "1433"
+  ingress.2541437006.cidr_blocks.#:              "" => "1"
+  ingress.2541437006.cidr_blocks.0:              "" => "0.0.0.0/0"
+  ingress.2541437006.from_port:                  "" => "22"
+  ingress.2541437006.ipv6_cidr_blocks.#:         "" => "0"
+  ingress.2541437006.protocol:                   "" => "tcp"
+  ingress.2541437006.security_groups.#:          "" => "0"
+  ingress.2541437006.self:                       "" => "false"
+  ingress.2541437006.to_port:                    "" => "22"
+  ingress.3262777321.cidr_blocks.#:              "" => "0"
+  ingress.3262777321.from_port:                  "" => "3306"
+  ingress.3262777321.ipv6_cidr_blocks.#:         "" => "0"
+  ingress.3262777321.protocol:                   "" => "tcp"
+  ingress.3262777321.security_groups.#:          "" => "1"
+  ingress.3262777321.security_groups.3002414095: "" => "sg-f2cc3481"
+  ingress.3262777321.self:                       "" => "false"
+  ingress.3262777321.to_port:                    "" => "3306"
+  name:                                          "" => "vpc_db"
+  owner_id:                                      "" => "<computed>"
+  tags.%:                                        "" => "1"
+  tags.Name:                                     "" => "DBServerSG"
+  vpc_id:                                        "" => "vpc-e9ccc290"[0m
+[0m[1maws_route_table_association.us-east-1-public: Creation complete after 0s (ID: rtbassoc-95bfefef)[0m[0m
+[0m[1maws_security_group.db: Creation complete after 5s (ID: sg-12cb3361)[0m[0m
+[0m[1maws_instance.nat: Still creating... (10s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still creating... (10s elapsed)[0m[0m
+[0m[1maws_instance.nat: Still creating... (20s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still creating... (20s elapsed)[0m[0m
+[0m[1maws_instance.nat: Provisioning with 'remote-exec'...[0m[0m
+[0m[0maws_instance.nat (remote-exec): Connecting to remote host via SSH...
+aws_instance.nat (remote-exec):   Host: 52.207.239.47
+aws_instance.nat (remote-exec):   User: ec2-user
+aws_instance.nat (remote-exec):   Password: false
+aws_instance.nat (remote-exec):   Private key: true
+aws_instance.nat (remote-exec):   SSH Agent: false
+[0m[1maws_instance.web-1: Provisioning with 'remote-exec'...[0m[0m
+[0m[0maws_instance.web-1 (remote-exec): Connecting to remote host via SSH...
+aws_instance.web-1 (remote-exec):   Host: 54.197.15.124
+aws_instance.web-1 (remote-exec):   User: ec2-user
+aws_instance.web-1 (remote-exec):   Password: false
+aws_instance.web-1 (remote-exec):   Private key: true
+aws_instance.web-1 (remote-exec):   SSH Agent: false
+[0m[1maws_instance.nat: Still creating... (30s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still creating... (30s elapsed)[0m[0m
+[0m[1maws_instance.nat: Still creating... (40s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still creating... (40s elapsed)[0m[0m
+[0m[0maws_instance.nat (remote-exec): Connecting to remote host via SSH...
+aws_instance.nat (remote-exec):   Host: 52.207.239.47
+aws_instance.nat (remote-exec):   User: ec2-user
+aws_instance.nat (remote-exec):   Password: false
+aws_instance.nat (remote-exec):   Private key: true
+aws_instance.nat (remote-exec):   SSH Agent: false
+[0m[0maws_instance.web-1 (remote-exec): Connecting to remote host via SSH...
+aws_instance.web-1 (remote-exec):   Host: 54.197.15.124
+aws_instance.web-1 (remote-exec):   User: ec2-user
+aws_instance.web-1 (remote-exec):   Password: false
+aws_instance.web-1 (remote-exec):   Private key: true
+aws_instance.web-1 (remote-exec):   SSH Agent: false
+[0m[0maws_instance.nat (remote-exec): Connecting to remote host via SSH...
+aws_instance.nat (remote-exec):   Host: 52.207.239.47
+aws_instance.nat (remote-exec):   User: ec2-user
+aws_instance.nat (remote-exec):   Password: false
+aws_instance.nat (remote-exec):   Private key: true
+aws_instance.nat (remote-exec):   SSH Agent: false
+[0m[1maws_instance.nat: Still creating... (50s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still creating... (50s elapsed)[0m[0m
+[0m[0maws_instance.nat (remote-exec): Connecting to remote host via SSH...
+aws_instance.nat (remote-exec):   Host: 52.207.239.47
+aws_instance.nat (remote-exec):   User: ec2-user
+aws_instance.nat (remote-exec):   Password: false
+aws_instance.nat (remote-exec):   Private key: true
+aws_instance.nat (remote-exec):   SSH Agent: false
+[0m[0maws_instance.web-1 (remote-exec): Connecting to remote host via SSH...
+aws_instance.web-1 (remote-exec):   Host: 54.197.15.124
+aws_instance.web-1 (remote-exec):   User: ec2-user
+aws_instance.web-1 (remote-exec):   Password: false
+aws_instance.web-1 (remote-exec):   Private key: true
+aws_instance.web-1 (remote-exec):   SSH Agent: false
+[0m[0maws_instance.nat (remote-exec): Connecting to remote host via SSH...
+aws_instance.nat (remote-exec):   Host: 52.207.239.47
+aws_instance.nat (remote-exec):   User: ec2-user
+aws_instance.nat (remote-exec):   Password: false
+aws_instance.nat (remote-exec):   Private key: true
+aws_instance.nat (remote-exec):   SSH Agent: false
+[0m[1maws_instance.nat: Still creating... (1m0s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still creating... (1m0s elapsed)[0m[0m
+[0m[0maws_instance.web-1 (remote-exec): Connecting to remote host via SSH...
+aws_instance.web-1 (remote-exec):   Host: 54.197.15.124
+aws_instance.web-1 (remote-exec):   User: ec2-user
+aws_instance.web-1 (remote-exec):   Password: false
+aws_instance.web-1 (remote-exec):   Private key: true
+aws_instance.web-1 (remote-exec):   SSH Agent: false
+[0m[0maws_instance.nat (remote-exec): Connecting to remote host via SSH...
+aws_instance.nat (remote-exec):   Host: 52.207.239.47
+aws_instance.nat (remote-exec):   User: ec2-user
+aws_instance.nat (remote-exec):   Password: false
+aws_instance.nat (remote-exec):   Private key: true
+aws_instance.nat (remote-exec):   SSH Agent: false
+[0m[1maws_instance.nat: Still creating... (1m10s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still creating... (1m10s elapsed)[0m[0m
+[0m[0maws_instance.web-1 (remote-exec): Connecting to remote host via SSH...
+aws_instance.web-1 (remote-exec):   Host: 54.197.15.124
+aws_instance.web-1 (remote-exec):   User: ec2-user
+aws_instance.web-1 (remote-exec):   Password: false
+aws_instance.web-1 (remote-exec):   Private key: true
+aws_instance.web-1 (remote-exec):   SSH Agent: false
+[0m[0maws_instance.nat (remote-exec): Connecting to remote host via SSH...
+aws_instance.nat (remote-exec):   Host: 52.207.239.47
+aws_instance.nat (remote-exec):   User: ec2-user
+aws_instance.nat (remote-exec):   Password: false
+aws_instance.nat (remote-exec):   Private key: true
+aws_instance.nat (remote-exec):   SSH Agent: false
+[0m[1maws_instance.nat: Still creating... (1m20s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still creating... (1m20s elapsed)[0m[0m
+[0m[0maws_instance.web-1 (remote-exec): Connecting to remote host via SSH...
+aws_instance.web-1 (remote-exec):   Host: 54.197.15.124
+aws_instance.web-1 (remote-exec):   User: ec2-user
+aws_instance.web-1 (remote-exec):   Password: false
+aws_instance.web-1 (remote-exec):   Private key: true
+aws_instance.web-1 (remote-exec):   SSH Agent: false
+[0m[0maws_instance.nat (remote-exec): Connecting to remote host via SSH...
+aws_instance.nat (remote-exec):   Host: 52.207.239.47
+aws_instance.nat (remote-exec):   User: ec2-user
+aws_instance.nat (remote-exec):   Password: false
+aws_instance.nat (remote-exec):   Private key: true
+aws_instance.nat (remote-exec):   SSH Agent: false
+[0m[1maws_instance.nat: Still creating... (1m30s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still creating... (1m30s elapsed)[0m[0m
+[0m[0maws_instance.web-1 (remote-exec): Connecting to remote host via SSH...
+aws_instance.web-1 (remote-exec):   Host: 54.197.15.124
+aws_instance.web-1 (remote-exec):   User: ec2-user
+aws_instance.web-1 (remote-exec):   Password: false
+aws_instance.web-1 (remote-exec):   Private key: true
+aws_instance.web-1 (remote-exec):   SSH Agent: false
+[0m[0maws_instance.nat (remote-exec): Connecting to remote host via SSH...
+aws_instance.nat (remote-exec):   Host: 52.207.239.47
+aws_instance.nat (remote-exec):   User: ec2-user
+aws_instance.nat (remote-exec):   Password: false
+aws_instance.nat (remote-exec):   Private key: true
+aws_instance.nat (remote-exec):   SSH Agent: false
+[0m[1maws_instance.nat: Still creating... (1m40s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still creating... (1m40s elapsed)[0m[0m
+[0m[0maws_instance.web-1 (remote-exec): Connecting to remote host via SSH...
+aws_instance.web-1 (remote-exec):   Host: 54.197.15.124
+aws_instance.web-1 (remote-exec):   User: ec2-user
+aws_instance.web-1 (remote-exec):   Password: false
+aws_instance.web-1 (remote-exec):   Private key: true
+aws_instance.web-1 (remote-exec):   SSH Agent: false
+[0m[0maws_instance.web-1 (remote-exec): Connected!
+[0m[0maws_instance.web-1 (remote-exec): Create folders...DONE
+[0m[1maws_instance.web-1: Provisioning with 'file'...[0m[0m
+[0m[0maws_instance.nat (remote-exec): Connecting to remote host via SSH...
+aws_instance.nat (remote-exec):   Host: 52.207.239.47
+aws_instance.nat (remote-exec):   User: ec2-user
+aws_instance.nat (remote-exec):   Password: false
+aws_instance.nat (remote-exec):   Private key: true
+aws_instance.nat (remote-exec):   SSH Agent: false
+[0m[1maws_instance.nat: Still creating... (1m50s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Still creating... (1m50s elapsed)[0m[0m
+[0m[1maws_instance.web-1: Provisioning with 'file'...[0m[0m
+[0m[1maws_instance.web-1: Provisioning with 'file'...[0m[0m
+[0m[1maws_instance.nat: Still creating... (2m0s elapsed)[0m[0m
+[0m[0maws_instance.nat (remote-exec): Connecting to remote host via SSH...
+aws_instance.nat (remote-exec):   Host: 52.207.239.47
+aws_instance.nat (remote-exec):   User: ec2-user
+aws_instance.nat (remote-exec):   Password: false
+aws_instance.nat (remote-exec):   Private key: true
+aws_instance.nat (remote-exec):   SSH Agent: false
+[0m[0maws_instance.nat (remote-exec): Connected!
+[0m[0maws_instance.nat (remote-exec): Create folders...DONE
+[0m[1maws_instance.nat: Provisioning with 'file'...[0m[0m
+[0m[1maws_instance.nat: Provisioning with 'file'...[0m[0m
+[0m[1maws_instance.nat: Provisioning with 'file'...[0m[0m
+[0m[1maws_instance.nat: Still creating... (2m10s elapsed)[0m[0m
+[31mError applying plan:
+
+2 error(s) occurred:
+
+* aws_instance.nat: 1 error(s) occurred:
+
+* stat .ssh/jenkins: no such file or directory
+* aws_instance.web-1: 1 error(s) occurred:
+
+* stat .ssh/jenkins: no such file or directory
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m[0m
+Build step 'Execute shell' marked build as failure
+[WS-CLEANUP] Deleting project workspace...[WS-CLEANUP] done
+Triggering a new build of [8mha:////4NRCnzoteFL/ljiKS7dJA7BqeQvSJ7PCNg8cdXcqP1i4AAAAox+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzBEgZx/az8JP34+JTU4pKi/Mr4+PDUJMeCAn0AAgCmQcwAAAA=[0m__destroy__WebApp
+Finished: FAILURE

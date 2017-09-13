@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: gregory
+Build-Jdk: 1.7.0_45
+Extension-Name: buildresult-trigger
+Implementation-Title: buildresult-trigger
+Implementation-Version: 0.17
+Group-Id: org.jenkins-ci.plugins
+Short-Name: buildresult-trigger
+Long-Name: Jenkins BuildResultTrigger Plug-in
+Url: http://wiki.jenkins-ci.org/display/JENKINS/BuildResultTrigger+Plu
+ gin
+Plugin-Version: 0.17
+Hudson-Version: 1.522
+Jenkins-Version: 1.522
+Plugin-Developers: Gregory Boissinot:gbois:
+

@@ -1,0 +1,18 @@
+Started by upstream project "[8mha:////4N4Er/7iiEAzRimzDORqS3RmHiKB5CVL4XJWFk1qeZxOAAAArx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy5EgYV/az8JKDuxPTUeKN4l9SCnPzKeM+84pLE5NTi+PDUJMeCAn0Ahelb/NkAAAA=[0mStage_2_Deploy_Instaces_WebApp" build number [8mha:////4MSTmN89PnWNUikAAsppuzZfPVAgJtYEdWlyrQatWpJsAAAArx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBlX9rPwkoO7E9NR4o3iX1IKc/Mp4z7ziksTk1OL48NQkx4ICfRMALJdsYdoAAAA=[0m4
+originally caused by:
+ Started by upstream project "[8mha:////4AwvsZzOsiz3oyjD3mU+0mMvQfdGoTpRAkualyAKmyAnAAAArB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzpEgZF/az8JKDuxPTUeMP44NSS0oJ4l9SCnPzK+PDUJMeCAn0Ai2p6GtYAAAA=[0mStage_1_Setup_Deploy_WebApp" build number [8mha:////4LB5usni2yKT5SUtVcXCaW0IRkZgRqqwpJHUmk1mGXqoAAAArB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBiX9rPwkoO7E9NR4w/jg1JLSgniX1IKc/Mr48NQkx4ICfXMAJ6CvWdcAAAA=[0m7
+ originally caused by:
+  Started by GitHub push by ljubon
+Building in workspace /var/lib/jenkins/workspace/Stage_2a_Add_PublicIP
+[Stage_2a_Add_PublicIP] $ /bin/sh -xe /tmp/jenkins5338203983708545254.sh
++ sudo rm -rf /home/ec2-user/.ssh/known_hosts
+[Stage_2a_Add_PublicIP] $ /bin/sh -xe /tmp/jenkins2532954625698320068.sh
++ sudo ssh-keyscan -H web
+# web:22 SSH-2.0-OpenSSH_7.4
+# web:22 SSH-2.0-OpenSSH_7.4
+# web:22 SSH-2.0-OpenSSH_7.4
++ sudo ssh-keyscan -H nat
+# nat:22 SSH-2.0-OpenSSH_6.6.1
+# nat:22 SSH-2.0-OpenSSH_6.6.1
+# nat:22 SSH-2.0-OpenSSH_6.6.1
+Finished: SUCCESS

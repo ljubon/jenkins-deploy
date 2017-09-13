@@ -1,0 +1,13 @@
+commit 3447550de14ede4744897a249aa87e1c58ce48ee
+tree ed3219b7cf9886aea459f0fba8ece25ad05360cc
+parent 0e4b7fa7b1c9c0bebe68de7871fe4168c3595ec9
+author Ljubo Nikolic <ljubonikolic@gmail.com> 2017-09-13 21:08:59 +0200
+committer Ljubo Nikolic <ljubonikolic@gmail.com> 2017-09-13 21:08:59 +0200
+
+    test github hook
+
+
+
+:100644 100644 15cdc2d93bd7ca49744cfcaa2f7855f65fc8a111 b446ab15859c6bfb40e74725be2085621751d095 M	script/install_db.sh
+:100644 100644 386a584cfa95193dd6566ee3cc95a6d3420d1856 3e0e480128e066c3feb80aab3920799ea79c671f M	script/install_nat.sh
+:100644 100644 84308be223767e31094ef87bbac92166d270237e ae53e74ceda30468408aa71fdccf4e42d5071d58 M	script/install_web.sh

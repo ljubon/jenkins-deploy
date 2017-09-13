@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UpstreamCause>
+            <upstreamProject>Stage_1_Setup_Deploy_WebApp</upstreamProject>
+            <upstreamUrl>job/Stage_1_Setup_Deploy_WebApp/</upstreamUrl>
+            <upstreamBuild>2</upstreamBuild>
+            <upstreamCauses>
+              <com.cloudbees.jenkins.GitHubPushCause plugin="github@1.28.0">
+                <pushedBy>ljubon</pushedBy>
+              </com.cloudbees.jenkins.GitHubPushCause>
+            </upstreamCauses>
+          </hudson.model.Cause_-UpstreamCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <com.sonyericsson.rebuild.RebuildAction plugin="rebuild@1.25"/>
+    <hudson.plugins.parameterizedtrigger.CapturedEnvironmentAction plugin="parameterized-trigger@2.35.1">
+      <env serialization="custom">
+        <unserializable-parents/>
+        <tree-map>
+          <default>
+            <comparator class="hudson.util.CaseInsensitiveComparator"/>
+          </default>
+          <int>35</int>
+          <string>_</string>
+          <string>/etc/alternatives/java</string>
+          <string>BUILD_DISPLAY_NAME</string>
+          <string>#2</string>
+          <string>BUILD_ID</string>
+          <string>2</string>
+          <string>BUILD_NUMBER</string>
+          <string>2</string>
+          <string>BUILD_TAG</string>
+          <string>jenkins-__destroy__WebApp-2</string>
+          <string>BUILD_URL</string>
+          <string>http://jenkins:8080/job/__destroy__WebApp/2/</string>
+          <string>CLASSPATH</string>
+          <string></string>
+          <string>EXECUTOR_NUMBER</string>
+          <string>2</string>
+          <string>HOME</string>
+          <string>/home/ec2-user</string>
+          <string>HUDSON_HOME</string>
+          <string>/var/lib/jenkins</string>
+          <string>HUDSON_SERVER_COOKIE</string>
+          <string>630f7ffb6c8769ca</string>
+          <string>HUDSON_URL</string>
+          <string>http://jenkins:8080/</string>
+          <string>JAVA_HOME</string>
+          <string>/usr/lib/jvm/jre-1.8.0-openjdk</string>
+          <string>JENKINS_HOME</string>
+          <string>/var/lib/jenkins</string>
+          <string>JENKINS_SERVER_COOKIE</string>
+          <string>630f7ffb6c8769ca</string>
+          <string>JENKINS_URL</string>
+          <string>http://jenkins:8080/</string>
+          <string>JOB_BASE_NAME</string>
+          <string>__destroy__WebApp</string>
+          <string>JOB_DISPLAY_URL</string>
+          <string>http://jenkins:8080/job/__destroy__WebApp/display/redirect</string>
+          <string>JOB_NAME</string>
+          <string>__destroy__WebApp</string>
+          <string>JOB_URL</string>
+          <string>http://jenkins:8080/job/__destroy__WebApp/</string>
+          <string>LANG</string>
+          <string>en_US.UTF-8</string>
+          <string>LOGNAME</string>
+          <string>ec2-user</string>
+          <string>NLSPATH</string>
+          <string>/usr/dt/lib/nls/msg/%L/%N.cat</string>
+          <string>NODE_LABELS</string>
+          <string>master</string>
+          <string>NODE_NAME</string>
+          <string>master</string>
+          <string>PATH</string>
+          <string>/usr/lib/jvm/jre-1.8.0-openjdk/bin:/sbin:/usr/sbin:/bin:/usr/bin</string>
+          <string>PATH+JDK</string>
+          <string>/usr/lib/jvm/jre-1.8.0-openjdk/bin</string>
+          <string>PWD</string>
+          <string>/</string>
+          <string>RUN_CHANGES_DISPLAY_URL</string>
+          <string>http://jenkins:8080/job/__destroy__WebApp/2/display/redirect?page=changes</string>
+          <string>RUN_DISPLAY_URL</string>
+          <string>http://jenkins:8080/job/__destroy__WebApp/2/display/redirect</string>
+          <string>SHELL</string>
+          <string>/bin/bash</string>
+          <string>SHLVL</string>
+          <string>2</string>
+          <string>USER</string>
+          <string>ec2-user</string>
+          <string>WORKSPACE</string>
+          <string>/var/lib/jenkins/workspace/__destroy__WebApp</string>
+          <string>XFILESEARCHPATH</string>
+          <string>/usr/dt/app-defaults/%L/Dt</string>
+        </tree-map>
+        <hudson.EnvVars>
+          <default>
+            <platform>UNIX</platform>
+          </default>
+        </hudson.EnvVars>
+      </env>
+    </hudson.plugins.parameterizedtrigger.CapturedEnvironmentAction>
+  </actions>
+  <queueId>8</queueId>
+  <timestamp>1505259386055</timestamp>
+  <startTime>1505259386056</startTime>
+  <result>SUCCESS</result>
+  <duration>642</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/lib/jenkins/workspace/__destroy__WebApp</workspace>
+  <hudsonVersion>2.78</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

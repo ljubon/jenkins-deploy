@@ -1,0 +1,15 @@
+Started by user [8mha:////4EINkqsf5bL2wTVc4hWK8xaujnXgeIaTtqHVr7a5/p0iAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZu/dLi1CL9xJTczDwACG0V4sAAAAA=[0mLjubo Nikolic
+Building in workspace /var/lib/jenkins/workspace/Stage_2a_Add_PublicIP
+[Stage_2a_Add_PublicIP] $ /bin/sh -xe /tmp/jenkins6428943712526106272.sh
++ cd /home/ec2-user/webapp-aws-terraform/
++ echo 'Importing public IP addreses hosts file...'
+Importing public IP addreses hosts file...
+++ terraform output public_nat
++ echo '34.227.154.104 nat-server nat'
+++ terraform output public_web
++ echo '34.226.253.110 web-server web'
++ echo 'Importing DONE'
+Importing DONE
++ sudo ssh-keyscan -H web
++ sudo ssh-keyscan -H nat
+Finished: SUCCESS
