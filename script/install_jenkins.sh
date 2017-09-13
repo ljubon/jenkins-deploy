@@ -43,7 +43,7 @@ echo "Permissions DONE"
 
 # edit /var/lib/jenkins/jenkins.model.JenkinsLocationConfiguration.xml:
 # <jenkinsUrl>http://35.157.92.54:8080/</jenkinsUrl>
-sudo sed -i "s/[old IP]/[new IP]/g" /var/lib/jenkins/jenkins.model.JenkinsLocationConfiguration.xml
+#sudo sed -i "s/[old IP]/[new IP]/g" /var/lib/jenkins/jenkins.model.JenkinsLocationConfiguration.xml
 
 sudo dos2unix /etc/sysconfig/jenkins
 sudo dos2unix /var/lib/jenkins/config.xml
