@@ -1,13 +1,18 @@
 #@IgnoreInspection BashAddShebang
 echo "*****************GENERATE SSH_KEY*****************"
 echo "Generate ssh-key for ec2-user account..."
-sudo chown ec2-user:ec2-user /home/ec2-user/.ssh/
-sudo chmod 600 /home/ec2-user/.ssh/
-ssh-keygen -t rsa -N "" -f /home/ec2-user/.ssh/jenkins
-chown ec2-user:ec2-user /home/ec2-user/.ssh/*
-ls -lart /home/ec2-user/.ssh/
-sudo cp /home/ec2-user/.ssh/jenkins* /root/.ssh/
+sudo cd /home/ec2-user/
+sudo ssh-keygen -t rsa -N "" -f /home/ec2-user/.ssh/jenkins
+sudo chmod 600 /home/ec2-user/.ssh/jenkins
+sudo chown -R ec2-user:ec2-user /home/ec2-user/.ssh
+sudo ls -lart /home/ec2-user/.ssh
+echo "Key jenkins is generated"
+
 echo "Copy ssh-keys to root account and set permission"
+sudo cp /home/ec2-user/.ssh/jenkins* /root/.ssh/
+sudo ls -lart /root/.ssh
+echo "Copy ssh-keys to root account and set permission"
+
 echo "Current location: $(pwd)"
 cd /home/ec2-user/
 echo "Change to : $(pwd)"

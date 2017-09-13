@@ -10,6 +10,8 @@
 
 # Terraform
 *.tfvars
+*.lock.info
+*.lock
 
 # Module
 .terraform/
@@ -18,7 +20,6 @@
 *.pub
 *.ppk
 *.pem
-*.lock
 
 # Packages #
 ############
