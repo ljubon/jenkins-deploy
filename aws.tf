@@ -9,8 +9,7 @@ resource "aws_key_pair" "ljubon-key-jenkins" {
   key_name   = "${var.key_name}"
   public_key = "${file(var.public_key_path)}"
 }
-
-
+# add test
 # RHEL instance for Jenkins server
 resource "aws_instance" "jenkins" {
 	ami = "${var.amis}"
