@@ -10,6 +10,7 @@ resource "aws_key_pair" "ljubon-key-jenkins" {
   public_key = "${file(var.public_key_path)}"
 }
 
+
 # RHEL instance for Jenkins server
 resource "aws_instance" "jenkins" {
 	ami = "${var.amis}"
@@ -66,9 +67,9 @@ resource "aws_instance" "jenkins" {
 			"cd /$HOME/script",
 			"./install.sh",
 			"./install_java.sh",
-			"./install_ansible.sh",
-			"./install_maven.sh",
-			"./install_terraform.sh",
+			#"./install_ansible.sh",
+			#"./install_maven.sh",
+			#"./install_terraform.sh",
 			"./install_jenkins.sh",
 			"echo '[Execution scripts DONE]' "
 		]
