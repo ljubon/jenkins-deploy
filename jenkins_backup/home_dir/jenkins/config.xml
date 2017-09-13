@@ -80,6 +80,7 @@
         <string>__destroy__WebApp</string>
         <string>Stage_1_Setup_Deploy_WebApp</string>
         <string>Stage_2_Deploy_Instaces_WebApp</string>
+        <string>Stage_2a_Add_PublicIP</string>
       </jobNames>
       <jobFilters/>
       <columns/>

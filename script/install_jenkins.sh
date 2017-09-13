@@ -1,3 +1,4 @@
+#@IgnoreInspection BashAddShebang
 # Jenkins user: ec2-user
 # Jenkins home: /var/lib/jenkins/
 # 5 pre-configured jobs for https://github.com/ljubon/webapp-aws-terraform
@@ -32,7 +33,7 @@ echo "Import DONE"
 
 # SET PERMISSIONS
 echo "Set permissions..."
-sudo chown ec2-user:ec2-user /etc/hosts # FIX: for job, to allow terraform output public_ip set to /etc/hosts
+sudo chown ec2-user:ec2-user /etc/hosts
 sudo chown ec2-user:ec2-user /home/ec2-user/.ssh/jenkins*
 
 sudo chown -R ec2-user:ec2-user /var/lib/jenkins

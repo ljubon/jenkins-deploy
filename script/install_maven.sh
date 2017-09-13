@@ -23,12 +23,10 @@ echo "[Edit configuration file /etc/profile.d/maven.sh]"
 sudo echo "export M2_HOME=/opt/maven" >> /etc/profile.d/maven.sh
 sudo echo "export M2=$M2_HOME/bin" >> /etc/profile.d/maven.sh
 sudo echo "export PATH=/opt/maven/bin:$PATH" >> /etc/profile.d/maven.sh
-	
 
 echo "[Load maven.sh file]"
 source /etc/profile.d/maven.sh
 echo "[Maven Version: $(mvn -v)]"
-
 
 cd /home/ec2-user/
 echo "*****************FINISH MAVEN*****************"
