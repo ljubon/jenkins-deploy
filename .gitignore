@@ -12,7 +12,8 @@
 *.tfvars
 
 # Module
-.terraform/*
+.terraform/
+.idea/
 
 *.pub
 *.ppk

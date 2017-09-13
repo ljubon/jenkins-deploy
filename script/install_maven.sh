@@ -30,5 +30,5 @@ source /etc/profile.d/maven.sh
 echo "[Maven Version: $(mvn -v)]"
 
 
-cd  $HOME/
+cd /home/ec2-user/
 echo "*****************FINISH MAVEN*****************"

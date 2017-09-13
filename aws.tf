@@ -21,32 +21,48 @@ resource "aws_instance" "jenkins" {
 	source_dest_check = false
 	subnet_id = "${aws_subnet.public_subnet.id}"
 	vpc_security_group_ids = ["${aws_security_group.JenkinsSG.id}"]
-	
-	provisioner "file" {
-		# copy all files from 
-		# script directory to home directory on remote machine
-		source      = "script/"
-		destination = "$HOME"
 
+	# Create folder for transfering files
+	provisioner "remote-exec" {
+		inline = [
+			"mkdir /home/ec2-user/script",
+			"mkdir /home/ec2-user/jenkins_backup",
+			"echo 'Create folders....DONE' "
+		]
 		connection {
 			type		= "ssh"
 			user		= "ec2-user"
 			agent		= true
 		}
 	}
-	
+
+	# Move script/ -> $HOME/script/ on remote machine
+	provisioner "file" {
+		source      = "script/"
+		destination = "$HOME/script"
+		connection {
+			type		= "ssh"
+			user		= "ec2-user"
+			agent		= true
+		}
+	}
+
+	# Move jenkins-backup/ -> $HOME/jenkins-backup/ on remote machine
+	provisioner "file" {
+		source      = "jenkins_backup/"
+		destination = "$HOME/jenkins_backup"
+		connection {
+			type		= "ssh"
+			user		= "ec2-user"
+			agent		= true
+		}
+	}
+
+	# $HOME/script execution
 	provisioner "remote-exec" {
 		inline = [
-			"mkdir script",
-			# now we have jenkins and script folder in $HOME directory
-			"mv *.sh /$HOME/script/",
-			"echo 'Scripts moved to /$HOME/script/'",
 			"sudo chmod 777 /$HOME/script/*",
-			"echo 'Set permission for scripts /$HOME/script/'",
 			"ls -lart /$HOME/script/",
-			"ls -lart /$HOME/jenkins/",
-			"sudo chmod 666 -R /$HOME/jenkins/",
-			"echo '[Start provisining...]'",
 			"cd /$HOME/script",
 			"./install.sh",
 			"./install_java.sh",
@@ -54,14 +70,12 @@ resource "aws_instance" "jenkins" {
 			"./install_maven.sh",
 			"./install_terraform.sh",
 			"./install_jenkins.sh",
-			"echo '[Provisining done]'"
+			"echo '[Execution scripts DONE]' "
 		]
-		
 		connection {
 			type		= "ssh"
 			user		= "ec2-user"
 			agent		= true
-			#script_path = "/home/ec2-user/install.sh"
 		}
 	}
 	
