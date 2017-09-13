@@ -69,7 +69,7 @@ resource "aws_instance" "jenkins" {
 			"./install_java.sh",
 			#"./install_ansible.sh",
 			#"./install_maven.sh",
-			#"./install_terraform.sh",
+			"./install_terraform.sh",
 			"./install_jenkins.sh",
 			"echo '[Execution scripts DONE]' "
 		]

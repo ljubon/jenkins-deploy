@@ -1,6 +1,6 @@
 # Jenkins user: ec2-user
 # Jenkins home: /var/lib/jenkins/
-# 4 pre-configured jobs
+# 5 pre-configured jobs for https://github.com/ljubon/webapp-aws-terraform
 # plugins
 
 echo "[*****************JENKINS*****************]"
@@ -41,16 +41,8 @@ sudo chown -R ec2-user:ec2-user /var/cache/jenkins
 sudo chown ec2-user:ec2-user /etc/sysconfig/jenkins
 echo "Permissions DONE"
 
-# edit /var/lib/jenkins/jenkins.model.JenkinsLocationConfiguration.xml:
-# <jenkinsUrl>http://35.157.92.54:8080/</jenkinsUrl>
-#sudo sed -i "s/[old IP]/[new IP]/g" /var/lib/jenkins/jenkins.model.JenkinsLocationConfiguration.xml
-
 sudo dos2unix /etc/sysconfig/jenkins
 sudo dos2unix /var/lib/jenkins/config.xml
-
-#echo "Importing Jenkins files and jobs..."
-#cd /$HOME/script/jenkins
-#echo "Location: $(pwd) User: $(whoami) List current directory: $(ls -lart)"
 
 # START JENKINS
 echo "Start Jenkins..."
