@@ -1,4 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <org.jvnet.hudson.plugins.SSHBuildWrapper_-DescriptorImpl plugin="ssh@2.5">
-  <sites/>
+    <sites>
+        <org.jvnet.hudson.plugins.CredentialsSSHSite>
+            <hostname>nat</hostname>
+            <username>ec2-user</username>
+            <port>22</port>
+            <credentialId>46be89ef-4f45-4b72-8378-a6ce45309ebe</credentialId>
+            <serverAliveInterval>0</serverAliveInterval>
+            <timeout>0</timeout>
+            <pty>false</pty>
+        </org.jvnet.hudson.plugins.CredentialsSSHSite>
+        <org.jvnet.hudson.plugins.CredentialsSSHSite>
+            <hostname>web</hostname>
+            <username>ec2-user</username>
+            <port>22</port>
+            <credentialId>46be89ef-4f45-4b72-8378-a6ce45309ebe</credentialId>
+            <serverAliveInterval>0</serverAliveInterval>
+            <timeout>0</timeout>
+            <pty>false</pty>
+        </org.jvnet.hudson.plugins.CredentialsSSHSite>
+    </sites>
 </org.jvnet.hudson.plugins.SSHBuildWrapper_-DescriptorImpl>

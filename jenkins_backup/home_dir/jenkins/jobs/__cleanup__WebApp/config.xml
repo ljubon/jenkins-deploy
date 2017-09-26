@@ -7,10 +7,6 @@
     <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.4.8">
       <gitLabConnection></gitLabConnection>
     </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
-    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.25">
-      <autoRebuild>false</autoRebuild>
-      <rebuildDisabled>false</rebuildDisabled>
-    </com.sonyericsson.rebuild.RebuildSettings>
   </properties>
   <scm class="hudson.scm.NullSCM"/>
   <canRoam>true</canRoam>
@@ -22,9 +18,9 @@
       <spec></spec>
       <upstreamProjects>__destroy__WebApp</upstreamProjects>
       <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
+          <name>FAILURE</name>
+          <ordinal>2</ordinal>
+          <color>RED</color>
         <completeBuild>true</completeBuild>
       </threshold>
     </jenkins.triggers.ReverseBuildTrigger>
@@ -33,23 +29,10 @@
   <builders>
     <hudson.tasks.Shell>
       <command>cd /home/ec2-user/
-rm -rf webapp-aws-terraform</command>
+          rm -rf webapp-aws-terraform
+      </command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers>
-    <hudson.plugins.ws__cleanup.WsCleanup plugin="ws-cleanup@0.34">
-      <patterns class="empty-list"/>
-      <deleteDirs>false</deleteDirs>
-      <skipWhenFailed>false</skipWhenFailed>
-      <cleanWhenSuccess>true</cleanWhenSuccess>
-      <cleanWhenUnstable>true</cleanWhenUnstable>
-      <cleanWhenFailure>true</cleanWhenFailure>
-      <cleanWhenNotBuilt>true</cleanWhenNotBuilt>
-      <cleanWhenAborted>true</cleanWhenAborted>
-      <notFailBuild>false</notFailBuild>
-      <cleanupMatrixParent>false</cleanupMatrixParent>
-      <externalDelete></externalDelete>
-    </hudson.plugins.ws__cleanup.WsCleanup>
-  </publishers>
+    <publishers/>
   <buildWrappers/>
 </project>

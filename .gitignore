@@ -17,6 +17,7 @@
 # Module
 .terraform/
 .idea/
+*.iml
 
 *.pub
 *.ppk

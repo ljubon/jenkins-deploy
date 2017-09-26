@@ -1,35 +1,37 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <user>
-  <fullName>noreply</fullName>
-  <properties>
-    <jenkins.security.ApiTokenProperty>
-      <apiToken>{AQAAABAAAAAw8d4MmYgCghGIxjgyjnXdv7xCteClxf7yGp7UObvmJGQ1UknKmgKV2RnK+XAJ5K1piioO4c5+/BF4qVcML2s/sA==}</apiToken>
-    </jenkins.security.ApiTokenProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.15">
-      <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
-    </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
-    <hudson.model.MyViewsProperty>
-      <views>
-        <hudson.model.AllView>
-          <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
-          <name>all</name>
-          <filterExecutors>false</filterExecutors>
-          <filterQueue>false</filterQueue>
-          <properties class="hudson.model.View$PropertyList"/>
-        </hudson.model.AllView>
-      </views>
-    </hudson.model.MyViewsProperty>
-    <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.0">
-      <providerId>default</providerId>
-    </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
-    <hudson.model.PaneStatusProperties>
-      <collapsed/>
-    </hudson.model.PaneStatusProperties>
-    <hudson.search.UserSearchProperty>
-      <insensitiveSearch>true</insensitiveSearch>
-    </hudson.search.UserSearchProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.20">
-      <emailAddress>noreply@github.com</emailAddress>
-    </hudson.tasks.Mailer_-UserProperty>
-  </properties>
+    <fullName>noreply</fullName>
+    <properties>
+        <jenkins.security.ApiTokenProperty>
+            <apiToken>
+                {AQAAABAAAAAw8d4MmYgCghGIxjgyjnXdv7xCteClxf7yGp7UObvmJGQ1UknKmgKV2RnK+XAJ5K1piioO4c5+/BF4qVcML2s/sA==}
+            </apiToken>
+        </jenkins.security.ApiTokenProperty>
+        <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.15">
+            <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
+        </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
+        <hudson.model.MyViewsProperty>
+            <views>
+                <hudson.model.AllView>
+                    <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
+                    <name>all</name>
+                    <filterExecutors>false</filterExecutors>
+                    <filterQueue>false</filterQueue>
+                    <properties class="hudson.model.View$PropertyList"/>
+                </hudson.model.AllView>
+            </views>
+        </hudson.model.MyViewsProperty>
+        <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.0">
+            <providerId>default</providerId>
+        </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
+        <hudson.model.PaneStatusProperties>
+            <collapsed/>
+        </hudson.model.PaneStatusProperties>
+        <hudson.search.UserSearchProperty>
+            <insensitiveSearch>true</insensitiveSearch>
+        </hudson.search.UserSearchProperty>
+        <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.20">
+            <emailAddress>noreply@github.com</emailAddress>
+        </hudson.tasks.Mailer_-UserProperty>
+    </properties>
 </user>

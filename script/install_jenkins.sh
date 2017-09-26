@@ -15,8 +15,8 @@ sudo yum install -y jenkins
 
 # BACKUP
 echo "Backup original jobs and files..."
-sudo mv /etc/sysconfig/jenkins /etc/sysconfig/jenkins.backup
-sudo mv /var/lib/jenkins /var/lib/jenkins.backup
+sudo mv /etc/sysconfig/jenkins /etc/sysconfig/jenkins_backup
+sudo mv /var/lib/jenkins /var/lib/jenkins_backup
 echo "$(ls -lart)"
 echo "$(pwd)"
 echo "Backup DONE"

@@ -9,7 +9,8 @@
       <clientCacheSize>20</clientCacheSize>
     </github-server-config>
   </configs>
+    <hookUrl>http://18.194.133.185:8080/github-webhook/</hookUrl>
   <hookSecretConfig>
-    <credentialsId></credentialsId>
+      <credentialsId>89e3a17a-8721-4fbd-b61f-25c2dcf2953a</credentialsId>
   </hookSecretConfig>
 </github-plugin-configuration>

@@ -16,7 +16,7 @@
   </licenses>
 
   <artifactId>github-api</artifactId>
-  <version>1.86</version>
+    <version>1.89</version>
   <packaging>hpi</packaging>
   <name>GitHub API Plugin</name>
   <url>https://wiki.jenkins-ci.org/display/JENKINS/GitHub+API+Plugin</url>
@@ -36,7 +36,7 @@
     <dependency>
       <groupId>org.kohsuke</groupId>
       <artifactId>github-api</artifactId>
-      <version>1.86</version>
+        <version>1.89</version>
       <exclusions>
         <exclusion>
           <groupId>commons-io</groupId>
@@ -50,6 +50,14 @@
           <groupId>commons-codec</groupId>
           <artifactId>commons-codec</artifactId>
         </exclusion>
+          <exclusion> <!-- TODO pending https://github.com/kohsuke/github-api/pull/378 -->
+              <groupId>com.infradna.tool</groupId>
+              <artifactId>bridge-method-annotation</artifactId>
+          </exclusion>
+          <exclusion> <!-- provided by core -->
+              <groupId>commons-lang</groupId>
+              <artifactId>commons-lang</artifactId>
+          </exclusion>
       </exclusions>
     </dependency>
     <dependency>
@@ -77,6 +85,6 @@
   <scm>
     <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
-    <tag>github-api-1.86</tag>
+      <tag>github-api-1.89</tag>
   </scm>
 </project>

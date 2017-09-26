@@ -1,24 +1,23 @@
 https://api.github.com/repos/ljubon/webapp-aws-terraform/hooks
 GET
 1
-Authorization: token 473c1c47af299f194284514511454e340334a965
+Authorization: token 709d9920c3854a501c94764d75b06c7fe5dc1352
 HTTP/1.1 200 OK
 26
+Server: GitHub.com
+Date: Tue, 26 Sep 2017 17:00:19 GMT
+Content-Type: application/json; charset=utf-8
 Transfer-Encoding: chunked
+Status: 200 OK
+X-RateLimit-Limit: 5000
+X-RateLimit-Remaining: 4939
+X-RateLimit-Reset: 1506447118
+Cache-Control: private, max-age=60, s-maxage=60
+Vary: Accept, Authorization, Cookie, X-GitHub-OTP
+ETag: W/"cd799aaa8f389ad1948fdaff1ed6ea4f"
 X-OAuth-Scopes: admin:repo_hook, repo
 X-Accepted-OAuth-Scopes: admin:repo_hook, public_repo, read:repo_hook, repo, write:repo_hook
 X-GitHub-Media-Type: github.v3; format=json
-Content-Encoding: gzip
-Server: GitHub.com
-Date: Wed, 13 Sep 2017 18:42:26 GMT
-Content-Type: application/octet-stream
-Status: 304 Not Modified
-X-RateLimit-Limit: 5000
-X-RateLimit-Remaining: 4911
-X-RateLimit-Reset: 1505328862
-Cache-Control: private, max-age=60, s-maxage=60
-Vary: Accept, Authorization, Cookie, X-GitHub-OTP
-ETag: "d32b7e173cd4291f4457bd59979637ad"
 Access-Control-Expose-Headers: ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
 Access-Control-Allow-Origin: *
 Content-Security-Policy: default-src 'none'
@@ -26,10 +25,11 @@ Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
 X-Content-Type-Options: nosniff
 X-Frame-Options: deny
 X-XSS-Protection: 1; mode=block
-X-Runtime-rack: 0.056471
-X-GitHub-Request-Id: C5D2:438B:2585603:4FBE7B5:59B97C11
-OkHttp-Sent-Millis: 1505328145949
-OkHttp-Received-Millis: 1505328146100
+X-Runtime-rack: 0.107068
+Content-Encoding: gzip
+X-GitHub-Request-Id: E40C:2611:374D85A:72682BB:59CA87A3
+OkHttp-Sent-Millis: 1506445219064
+OkHttp-Received-Millis: 1506445219436
 
 TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
 2

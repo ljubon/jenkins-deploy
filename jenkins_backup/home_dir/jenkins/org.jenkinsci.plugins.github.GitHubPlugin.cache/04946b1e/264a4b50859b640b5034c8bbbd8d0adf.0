@@ -1,20 +1,20 @@
 https://api.github.com/repos/ljubon/webapp-aws-terraform
 GET
 1
-Authorization: token 473c1c47af299f194284514511454e340334a965
+Authorization: token 709d9920c3854a501c94764d75b06c7fe5dc1352
 HTTP/1.1 200 OK
 27
 Server: GitHub.com
-Date: Wed, 13 Sep 2017 18:42:25 GMT
+Date: Tue, 26 Sep 2017 17:00:00 GMT
 Content-Type: application/json; charset=utf-8
 Transfer-Encoding: chunked
 Status: 200 OK
 X-RateLimit-Limit: 5000
-X-RateLimit-Remaining: 4911
-X-RateLimit-Reset: 1505328862
+X-RateLimit-Remaining: 4941
+X-RateLimit-Reset: 1506447118
 Cache-Control: private, max-age=60, s-maxage=60
 Vary: Accept, Authorization, Cookie, X-GitHub-OTP
-ETag: W/"f6a45b6cbec7dbdc63bca419c3a5be43"
+ETag: W/"84e3472e5bd838b8b5597b470d9f2e2b"
 Last-Modified: Thu, 31 Aug 2017 13:23:35 GMT
 X-OAuth-Scopes: admin:repo_hook, repo
 X-Accepted-OAuth-Scopes: repo
@@ -26,11 +26,11 @@ Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
 X-Content-Type-Options: nosniff
 X-Frame-Options: deny
 X-XSS-Protection: 1; mode=block
-X-Runtime-rack: 0.038663
+X-Runtime-rack: 0.051011
 Content-Encoding: gzip
-X-GitHub-Request-Id: C5D2:438B:25855E5:4FBE798:59B97C11
-OkHttp-Sent-Millis: 1505328145672
-OkHttp-Received-Millis: 1505328145941
+X-GitHub-Request-Id: E408:2611:374CA0B:72664FA:59CA8790
+OkHttp-Sent-Millis: 1506445200222
+OkHttp-Received-Millis: 1506445200379
 
 TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
 2

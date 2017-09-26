@@ -1,7 +1,0 @@
-Started by user [8mha:////4EINkqsf5bL2wTVc4hWK8xaujnXgeIaTtqHVr7a5/p0iAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZu/dLi1CL9xJTczDwACG0V4sAAAAA=[0mLjubo Nikolic
-Building in workspace /var/lib/jenkins/workspace/__cleanup__WebApp
-[__cleanup__WebApp] $ /bin/sh -xe /tmp/jenkins6327470926590015311.sh
-+ cd /home/ec2-user/
-+ rm -rf webapp-aws-terraform
-[WS-CLEANUP] Deleting project workspace...[WS-CLEANUP] done
-Finished: SUCCESS

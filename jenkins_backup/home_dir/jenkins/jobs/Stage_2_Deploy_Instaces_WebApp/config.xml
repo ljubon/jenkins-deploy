@@ -1,35 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>- terraform apply  -&gt;  deploy WebApp environment on AWS (web, db, nat)&#xd;
-</description>
+    <description>- terraform apply -&gt; deploy WebApp environment on AWS (web, db, nat)&#xd;
+    </description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.4.8">
       <gitLabConnection></gitLabConnection>
     </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
-    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.25">
-      <autoRebuild>false</autoRebuild>
-      <rebuildDisabled>false</rebuildDisabled>
-    </com.sonyericsson.rebuild.RebuildSettings>
   </properties>
   <scm class="hudson.scm.NullSCM"/>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
-  <triggers>
-    <jenkins.triggers.ReverseBuildTrigger>
-      <spec></spec>
-      <upstreamProjects>Stage_1_Setup_Deploy_WebApp</upstreamProjects>
-      <threshold>
-        <name>SUCCESS</name>
-        <ordinal>0</ordinal>
-        <color>BLUE</color>
-        <completeBuild>true</completeBuild>
-      </threshold>
-    </jenkins.triggers.ReverseBuildTrigger>
-  </triggers>
+    <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
@@ -40,8 +25,14 @@ terraform apply</command>
       <command>sudo rm -rf /etc/hosts
 sudo touch /etc/hosts
 sudo chown ec2-user:ec2-user /etc/hosts
-sudo echo &quot;127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4&quot; &gt;&gt; /etc/hosts
-sudo echo &quot;::1         localhost localhost.localdomain localhost6 localhost6.localdomain6&quot; &gt;&gt; /etc/hosts
+          sudo chmod 666 /etc/hosts
+      </command>
+    </hudson.tasks.Shell>
+      <hudson.tasks.Shell>
+          <command>sudo echo &quot;127.0.0.1 localhost localhost.localdomain localhost4 localhost4.localdomain4&quot;
+              &gt;&gt; /etc/hosts
+              sudo echo &quot;::1 localhost localhost.localdomain localhost6 localhost6.localdomain6&quot; &gt;&gt;
+              /etc/hosts
 cd /home/ec2-user/webapp-aws-terraform/
 echo &quot;Importing public IP addreses hosts file...&quot;
 echo &quot;$(terraform output public_nat) nat-server nat&quot; &gt;&gt; /etc/hosts
@@ -50,30 +41,15 @@ echo &quot;Importing DONE&quot;</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.plugins.parameterizedtrigger.BuildTrigger plugin="parameterized-trigger@2.35.1">
-      <configs>
-        <hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
-          <configs class="empty-list"/>
-          <projects>__destroy__WebApp</projects>
-          <condition>UNSTABLE_OR_WORSE</condition>
-          <triggerWithNoParameters>true</triggerWithNoParameters>
-          <triggerFromChildProjects>false</triggerFromChildProjects>
-        </hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
-      </configs>
-    </hudson.plugins.parameterizedtrigger.BuildTrigger>
-    <hudson.plugins.ws__cleanup.WsCleanup plugin="ws-cleanup@0.34">
-      <patterns class="empty-list"/>
-      <deleteDirs>false</deleteDirs>
-      <skipWhenFailed>false</skipWhenFailed>
-      <cleanWhenSuccess>true</cleanWhenSuccess>
-      <cleanWhenUnstable>true</cleanWhenUnstable>
-      <cleanWhenFailure>true</cleanWhenFailure>
-      <cleanWhenNotBuilt>true</cleanWhenNotBuilt>
-      <cleanWhenAborted>true</cleanWhenAborted>
-      <notFailBuild>false</notFailBuild>
-      <cleanupMatrixParent>false</cleanupMatrixParent>
-      <externalDelete></externalDelete>
-    </hudson.plugins.ws__cleanup.WsCleanup>
+      <hudson.tasks.BuildTrigger>
+          <childProjects>Stage_2a_Add_PublicIP</childProjects>
+          <threshold>
+              <name>SUCCESS</name>
+              <ordinal>0</ordinal>
+              <color>BLUE</color>
+              <completeBuild>true</completeBuild>
+          </threshold>
+      </hudson.tasks.BuildTrigger>
   </publishers>
   <buildWrappers/>
 </project>
