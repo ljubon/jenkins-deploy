@@ -4,9 +4,8 @@ echo "Generate ssh-key for ec2-user account..."
 sudo cd /home/ec2-user/
 sudo chown -R ec2-user:ec2-user /home/ec2-user/.ssh
 sudo ssh-keygen -t rsa -N "" -f /home/ec2-user/.ssh/jenkins
-sudo chmod 660 /home/ec2-user/.ssh
+#sudo chmod 660 /home/ec2-user/.ssh
 sudo chmod 600 /home/ec2-user/.ssh/jenkins
-sudo chmod 666 /home/ec2-user/.ssh/jenkins.pub
 sudo ls -lart /home/ec2-user/.ssh
 echo "Key jenkins is generated"
 
