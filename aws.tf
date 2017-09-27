@@ -47,7 +47,7 @@ resource "aws_instance" "jenkins" {
 		}
 	}
 
-	# Move jenkins-backup/ -> $HOME/jenkins-backup/ on remote machine
+	# Move jenkins-backup/ -> $HOME/jenkins_backup/ on remote machine
 	provisioner "file" {
 		source      = "jenkins_backup/"
 		destination = "$HOME/jenkins_backup"
@@ -66,8 +66,8 @@ resource "aws_instance" "jenkins" {
 			"cd /$HOME/script",
 			"./install.sh",
 			"./install_java.sh",
-			#"./install_ansible.sh",
-			#"./install_maven.sh",
+			"./install_ansible.sh",
+			"./install_maven.sh",
 			"./install_terraform.sh",
 			"./install_jenkins.sh",
 			"echo '[Execution scripts DONE]' "

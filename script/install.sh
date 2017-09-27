@@ -2,9 +2,11 @@
 echo "*****************GENERATE SSH_KEY*****************"
 echo "Generate ssh-key for ec2-user account..."
 sudo cd /home/ec2-user/
-sudo ssh-keygen -t rsa -N "" -f /home/ec2-user/.ssh/jenkins
-sudo chmod 600 /home/ec2-user/.ssh/jenkins
 sudo chown -R ec2-user:ec2-user /home/ec2-user/.ssh
+sudo ssh-keygen -t rsa -N "" -f /home/ec2-user/.ssh/jenkins
+sudo chmod 660 /home/ec2-user/.ssh
+sudo chmod 600 /home/ec2-user/.ssh/jenkins
+sudo chmod 666 /home/ec2-user/.ssh/jenkins.pub
 sudo ls -lart /home/ec2-user/.ssh
 echo "Key jenkins is generated"
 
@@ -19,13 +21,9 @@ echo "Change to : $(pwd)"
 echo "*****************SSH_KEYS DONE*****************"
 
 echo "*****************EPEL RELEASE*****************"
-sudo yum -y install wget telnet git nmap zip unzip dos2unix
-wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-10.noarch.rpm
-sudo rpm -ivh epel-release-7-10.noarch.rpm
-sudo yum -y install epel-release
+sudo rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+sudo yum -y install wget telnet git dos2unix zip unzip tree
 sudo yum -y update
-sudo rm -rf epel-release-7-10.noarch.rpm
-cd /home/ec2-user/
 echo "*****************DONE EPEL*****************"
 
 echo "*****************GIT*****************"
@@ -37,4 +35,6 @@ echo "*****************CONFIGURE RHEL*****************"
 echo "Change hostname"
 sudo hostnamectl set-hostname jenkins-server
 echo "New hostname is: $(echo hostnamectl status)"
+sudo chown ec2-user:ec2-user /etc/hosts
+sudo chown ec2-user:ec2-user /home/ec2-user/.ssh/jenkins*
 echo "*****************DONE RHEL*****************"
